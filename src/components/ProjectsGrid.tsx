@@ -62,16 +62,25 @@ export function ProjectsGrid() {
                 </div>
               )}
               <div className="p-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-lg">{p.emoji}</span>
-                  <h3 className="text-lg font-semibold tracking-tight group-hover:text-[color:var(--card-accent)] transition-colors">
-                    {p.title}
-                  </h3>
-                  <span className="text-xs font-mono text-[color:var(--fg-muted)] ml-auto">
+                <div className="flex items-start justify-between gap-3 mb-2">
+                  <div className="flex items-start gap-2.5">
+                    <span className="text-xl leading-none mt-0.5">{p.emoji}</span>
+                    <div>
+                      <h3 className="text-lg font-semibold tracking-tight leading-snug group-hover:text-[color:var(--card-accent)] transition-colors">
+                        {p.title}
+                      </h3>
+                      {p.brand && (
+                        <div className="text-[11px] font-mono text-[color:var(--fg-muted)] tracking-wide mt-0.5 uppercase">
+                          {p.brand}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  <span className="text-xs font-mono text-[color:var(--fg-muted)] whitespace-nowrap pt-1">
                     {p.year}
                   </span>
                 </div>
-                <p className="text-sm text-[color:var(--fg-dim)] leading-relaxed mb-4">
+                <p className="text-sm text-[color:var(--fg-dim)] leading-relaxed mb-4 mt-3">
                   {p.tagline}
                 </p>
                 <div className="flex flex-wrap gap-1.5">

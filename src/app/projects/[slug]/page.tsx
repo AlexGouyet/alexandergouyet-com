@@ -205,7 +205,12 @@ export default async function ProjectPage({
 
         <div className="flex items-center gap-3 mb-4">
           <span className="text-4xl">{project.emoji}</span>
-          <span className="text-xs font-mono text-[color:var(--fg-muted)] tracking-widest uppercase">
+          {project.brand && (
+            <span className="text-xs font-mono text-[color:var(--fg-muted)] tracking-widest uppercase">
+              {project.brand}
+            </span>
+          )}
+          <span className="text-xs font-mono text-[color:var(--fg-muted)] tracking-widest uppercase ml-auto">
             {project.year}
           </span>
         </div>

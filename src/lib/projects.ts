@@ -15,6 +15,7 @@ export type Section =
 export type Project = {
   slug: string;
   title: string;
+  brand?: string;
   emoji: string;
   year: string;
   tagline: string;
@@ -28,15 +29,16 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "pipeline-lobster",
-    title: "Pipeline Lobster",
-    emoji: "🦞",
-    year: "2025",
+    slug: "swift-fit-sales-agent",
+    title: "AI Sales Agent for Corporate Wellness",
+    brand: "SwiftFit Sales Agent",
+    emoji: "🤖",
+    year: "2024 – Present",
     tagline:
-      "AI pipeline that turns a corporate lead signal into a deployed, interactive proposal in 13 seconds. 🏆 Won the Sales Molty at Moltathon ATX 2025.",
-    stack: ["Node.js", "Handlebars", "Telegram Bot", "Vercel", "Linkt AI"],
+      "Built a full AI-powered sales agent for corporate wellness. A Claude Code plugin orchestrates HubSpot, Notion, Asana, Slack, and Gmail daily. Pipeline Lobster, the lead-to-proposal automation inside it, won the Sales Molty at Moltathon ATX 2025.",
+    stack: ["Claude Code", "Node.js", "HubSpot", "Notion", "Asana", "Slack", "Vercel"],
     links: [
-      { label: "GitHub", href: "https://github.com/AlexGouyet/pipeline-lobster" },
+      { label: "Pipeline Lobster on GitHub", href: "https://github.com/AlexGouyet/pipeline-lobster" },
       { label: "Loom demo", href: "https://www.loom.com/share/770f552c35b645fd87a88579e30f035e" },
     ],
     accent: "#f97316",
@@ -47,158 +49,107 @@ export const projects: Project[] = [
         type: "loom",
         id: "770f552c35b645fd87a88579e30f035e",
         title: "Pipeline Lobster demo",
-        caption: "Full pipeline: lead signal → enrichment → pricing → deploy → Telegram alert in 13 seconds.",
+        caption: "Pipeline Lobster: lead signal → enrichment → pricing → deploy → Telegram alert in 13 seconds.",
       },
-      { type: "h2", text: "The Problem" },
+      { type: "h2", text: "What It Is" },
       {
         type: "p",
-        text: "Corporate wellness sales is slow. A rep spots a funding round or office expansion on LinkedIn, manually researches the company, builds a proposal in Canva, emails it as a PDF, and hopes for the best. The whole cycle takes days. The proposal is static. There's no way for the prospect to explore pricing or customize their package.",
+        text: "SwiftFit Sales Agent is an AI-powered sales operations system I built from scratch for Swift Fit Events. It has two halves: a Claude Code plugin that runs the team's daily sales workflow, and Pipeline Lobster — an automation that turns a lead signal into a deployed, interactive proposal in 13 seconds.",
       },
-      { type: "h2", text: "The Solution" },
+      { type: "h2", text: "Half 1 — Claude Code Plugin (daily ops)" },
       {
         type: "p",
-        text: "I built Pipeline Lobster to replace that entire workflow with an AI pipeline that runs autonomously:",
+        text: "A production Claude Code plugin used daily by the full team. It orchestrates our real tools — HubSpot, Notion, Asana, Slack, Gmail — across the full sales cycle: discovery prep, call recap, proposal build, deal hygiene, pipeline review, weekly reporting.",
+      },
+      {
+        type: "list",
+        items: [
+          "~20 skills covering every stage of the sales cycle",
+          "Live HubSpot integration for deal + contact hygiene automation",
+          "Notion-backed knowledge base (PARA framework) for client intel, lessons learned, and nuances",
+          "Slack + Gmail + Asana orchestration for communications and task management",
+        ],
+      },
+      { type: "h2", text: "Half 2 — Pipeline Lobster (lead → proposal)" },
+      {
+        type: "p",
+        text: "Pipeline Lobster is the lead-to-proposal automation that won the Sales Molty at Moltathon ATX 2025. Built solo in ~6 hours.",
       },
       {
         type: "quote",
         text: "Linkt AI Signal → Webhook → Enrich + Price → Deploy Landing Page → Telegram Alert. 13 seconds end-to-end.",
       },
-      {
-        type: "p",
-        text: "A corporate lead signal fires. 13 seconds later, the sales rep has a Telegram message with a live URL to a fully personalized, interactive proposal — co-branded with the prospect's logo, driven off a 146-SKU pricing catalog, deployed to its own Vercel URL.",
-      },
-      { type: "h2", text: "Architecture" },
+      { type: "h3", text: "Architecture" },
       {
         type: "list",
         items: [
-          "Lead intelligence: Linkt AI API — entity search, company enrichment (industry, HQ, employees, revenue, contacts)",
-          "Pricing engine: Custom CSV-driven 146-SKU catalog mapping group size + event type to recommended activations",
+          "Lead intelligence: Linkt AI API — entity search + enrichment (industry, HQ, employees, revenue, contacts)",
+          "Pricing engine: CSV-driven 146-SKU catalog mapping group size + event type to recommended activations",
           "Proposal generator: Handlebars HTML with inline CSS/JS — interactive quantity controls, toggle upgrades, live recalculation",
           "Deployment: Vercel CLI deploying each proposal to its own URL (e.g. base-power.vercel.app)",
           "Notifications: Telegram Bot API with full pricing breakdown in chat",
         ],
       },
-      { type: "h2", text: "The Hardest Parts" },
+      { type: "h3", text: "The Hardest Parts" },
       {
         type: "list",
         items: [
-          "Interactive pricing — client-side JS recalculating totals across 3 tiers with dynamic unit text (per-person / per-hour / flat-rate) as quantities change",
+          "Interactive pricing — client-side JS recalculating totals across 3 tiers with dynamic unit text (per-person / per-hour / flat) as quantities change",
           "Telegram message encoding — multi-byte emoji characters broke HTTP Content-Length until I switched from string.length to Buffer.byteLength",
           "Logo reliability — migrated from logo.dev (expired token) to Google Favicon V2 API for 100% uptime",
         ],
       },
-      { type: "h2", text: "Results" },
+      { type: "h2", text: "Impact" },
       {
         type: "list",
         items: [
-          "🏆 Winner, Sales Molty Award — Moltathon ATX 2025",
-          "Built solo in ~6 hours",
-          "Live proposals shipped for: Base Power, Apptronik, Yeti Coolers, CesiumAstro",
-          "Zero external frameworks — pure Node.js, three npm dependencies",
+          "🏆 Pipeline Lobster won the Sales Molty at Moltathon ATX 2025",
+          "Full team uses the Claude Code plugin daily across every sales stage",
+          "Live proposals shipped for Base Power, Apptronik, Yeti Coolers, CesiumAstro",
+          "Sourced and closed wellness activations for 30+ corporate clients including Morgan Stanley, Google, Prudential, Experian, PayPal, and CVS",
         ],
       },
     ],
   },
   {
-    slug: "swift-fit-events",
-    title: "Swift Fit Events",
-    emoji: "💪",
-    year: "2024 – Present",
+    slug: "swift-proposal-builder",
+    title: "Interactive Proposal Builder for Corporate Events",
+    brand: "Swift Proposal Builder",
+    emoji: "📄",
+    year: "2025",
     tagline:
-      "Delivered corporate wellness activations for 30+ clients including Morgan Stanley, Google, Prudential, Experian, PayPal, and CVS. Built the company's sales infrastructure from scratch and shipped a production Claude Code plugin that runs the full sales stack.",
-    stack: ["HubSpot", "Notion", "Asana", "Slack", "Claude Code"],
-    links: [{ label: "swiftfitevents.com", href: "https://swiftfitevents.com" }],
+      "Built a client-facing, interactive proposal tool for Swift Fit Events. React + TypeScript + Vite + Tailwind. Lets prospects explore activations, adjust group size, and see pricing update live.",
+    stack: ["React", "TypeScript", "Vite", "Tailwind"],
+    links: [],
     accent: "#06b6d4",
     body: [
-      { type: "h2", text: "The Role" },
+      { type: "h2", text: "What It Is" },
       {
         type: "p",
-        text: "I joined Swift Fit Events as the sole sales operator and have since scaled the pipeline to ~$100K ARR. My role blends sales, operations, and engineering — I close the deals and I build the systems that run underneath them.",
-      },
-      { type: "h2", text: "Clients" },
-      {
-        type: "p",
-        text: "Delivered corporate wellness activations for 30+ clients including Morgan Stanley, Google, Prudential, Experian, PayPal, and CVS.",
+        text: "A client-facing proposal builder for Swift Fit Events. Instead of sending a static PDF that prospects skim once and forget, the proposal is an interactive web app — they adjust the headcount, toggle optional activations, explore bundles, and see pricing recalculate live.",
       },
       { type: "h2", text: "What I Built" },
       {
         type: "list",
         items: [
-          "End-to-end sales infrastructure from scratch: CRM setup, outreach sequences, proposal workflow, and event operations",
-          "Production Claude Code plugin used daily by the full team — orchestrates HubSpot, Notion, Asana, Slack, and Gmail across the entire sales cycle",
-          "Pipeline Lobster — the AI proposal pipeline that won the Sales Molty at Moltathon ATX 2025 (see separate case study)",
+          "Full React + TypeScript front-end with Vite build pipeline",
+          "Interactive pricing engine driven off the Swift Fit activation catalog",
+          "Tailwind-based design system for on-brand, polished presentation",
+          "Deployed proposals at one-off URLs per prospect",
         ],
       },
       { type: "h2", text: "Stack" },
-      {
-        type: "p",
-        text: "HubSpot · Notion · Asana · Slack · Gmail · Claude Code · Google Drive · Telegram",
-      },
-    ],
-  },
-  {
-    slug: "openclaw",
-    title: "OpenClaw",
-    emoji: "🤖",
-    year: "2025 – Present",
-    tagline:
-      "Personal AI operating system — always-on autonomous agent running 24/7 on Apple Silicon. Multi-model routing across GPT-5, Claude, and Gemini. Cron-scheduled skills, persistent memory, Telegram interface.",
-    stack: ["Node.js", "GPT-5", "Claude", "Telegram", "Notion", "ElevenLabs", "DALL·E"],
-    links: [],
-    accent: "#6366f1",
-    body: [
-      { type: "h2", text: "Not a Chatbot" },
-      {
-        type: "p",
-        text: "OpenClaw is a 24/7 autonomous AI system running on a Mac Mini. It receives messages via Telegram, runs scheduled background jobs, coordinates subagents, and maintains a structured knowledge base across sessions — all without human intervention.",
-      },
-      {
-        type: "quote",
-        text: "The core design principle: help the user be more decisive, not more organized.",
-      },
-      { type: "h2", text: "What Makes It Different" },
-      {
-        type: "list",
-        items: [
-          "Always on — boots automatically, loads full context, monitors email/calendar/tasks hourly via heartbeat",
-          "Persistent memory — every session loads a five-layer memory stack (SOUL, IDENTITY, USER, daily log, MEMORY). Nothing is forgotten.",
-          "Autonomous scheduling — cron jobs run independently: journaling prompts, task reviews, auto-commits, monthly memory audits",
-          "Subagent delegation — complex tasks handed off to isolated subagents on separate model quotas",
-          "Multi-model routing — six LLMs available; model selection is dynamic based on task and quota",
-        ],
-      },
-      { type: "h2", text: "Active Skills" },
-      {
-        type: "list",
-        items: [
-          "Prayer Forge — 13-section nightly reflection with Strava integration, pattern analysis, Notion submission, DALL·E art generation",
-          "Tasks — Notion-backed task manager with auto-project matching",
-          "Week Goals — weekly ritual across 7 life categories, calendar synced",
-          "Mission Control — CRUD dashboard for Captain's Log, tasks, memories, agents, cron jobs",
-          "Moment Maker — extracts emotional peak from journal → woodcut-style DALL·E 3 art",
-          "Swift Fit Proposals — integration with Pipeline Lobster for CLI proposal generation",
-          "Summarize — URLs, PDFs, audio, YouTube via multiple LLM providers",
-        ],
-      },
-      { type: "h2", text: "Stack" },
-      {
-        type: "p",
-        text: "Node 22 on macOS (Apple Silicon) · Telegram Bot API · GPT-5, Claude Opus/Sonnet/Haiku, Gemini, o3 · Brave Search · Notion (PARA) · Strava · ElevenLabs · DALL·E 3 · Git-backed persistence auto-committed every 12h.",
-      },
-      { type: "h2", text: "Status" },
-      {
-        type: "p",
-        text: "Production. Running continuously on my Mac Mini. Backed up to private GitHub every 12 hours. Repo is private.",
-      },
+      { type: "p", text: "React · TypeScript · Vite · Tailwind CSS · Vercel" },
     ],
   },
   {
     slug: "grape",
-    title: "Grape.ag",
+    title: "Real-Time Powdery Mildew Detection at Vine Scale",
+    brand: "Grape.ag",
     emoji: "🍇",
     year: "2020 – 2021",
     tagline:
-      "Implemented UC Davis powdery mildew research as a production Python pipeline running every 15 minutes on AWS Lambda, populating the shipped iOS app for vineyard owners in real time.",
+      "Built the Python algorithm implementing UC Davis powdery mildew research at per-vine scale. Ran on AWS Lambda every 15 minutes, populating the shipped iOS app for vineyard owners.",
     stack: ["Python", "pandas", "AWS Lambda", "React Native"],
     links: [
       { label: "GitHub", href: "https://github.com/AlexGouyet/Grape" },
@@ -276,11 +227,12 @@ export const projects: Project[] = [
   },
   {
     slug: "drones",
-    title: "Drones",
+    title: "From Hardware Hacks to a National UAV Podium",
+    brand: "Drones — MakeX → McGill AERO",
     emoji: "🚁",
     year: "2016 – 2021",
     tagline:
-      "Flight team member at McGill AERO (1-of-5, two years running). Team took 2nd place + \"Most Professional\" at Canada's national UAV competition. Landed us the front page of the Montreal Gazette — grew student applications 400%. Started with a $15 altitude-hold hack on a consumer drone, 48K views on YouTube.",
+      "Built drones from scratch. Soldered a $15 altitude-hold module into a Syma X8C (48K-view YouTube tutorial), hand-built my first quadcopter at MakeX Palo Alto, and flew Ardupilot-based hardware on McGill AERO's 2nd-place national UAV competition team.",
     stack: ["Ardupilot", "Pixhawk", "Soldering", "Python", "HTC Vive VR GCS"],
     links: [
       { label: "YouTube tutorial", href: "https://www.youtube.com/watch?v=hrPOWMnhVgA" },
@@ -346,26 +298,10 @@ export const projects: Project[] = [
       {
         type: "gallery",
         images: [
-          {
-            src: "/images/drones/drones_winter.JPG",
-            alt: "Winter flight testing",
-            caption: "Winter test",
-          },
-          {
-            src: "/images/drones/flight_line4.JPG",
-            alt: "On the flight line",
-            caption: "Flight line",
-          },
-          {
-            src: "/images/drones/flight_line2.jpg",
-            alt: "On the flight line",
-            caption: "Flight line",
-          },
-          {
-            src: "/images/drones/flight_line3.webp",
-            alt: "On the flight line",
-            caption: "Flight line",
-          },
+          { src: "/images/drones/drones_winter.JPG", alt: "Winter flight testing", caption: "Winter test" },
+          { src: "/images/drones/flight_line4.JPG", alt: "On the flight line", caption: "Flight line" },
+          { src: "/images/drones/flight_line2.jpg", alt: "On the flight line", caption: "Flight line" },
+          { src: "/images/drones/flight_line3.webp", alt: "On the flight line", caption: "Flight line" },
         ],
       },
       {
@@ -398,10 +334,7 @@ export const projects: Project[] = [
         alt: "MIAE industry dinner, Fall 2019",
         caption: "Fall 2019 — the industry dinner I curated. 40 of Montreal's leading aerospace professionals matched 1-on-1 with 40 of the top McGill aerospace students.",
       },
-      {
-        type: "p",
-        text: "Things we ran:",
-      },
+      { type: "p", text: "Things we ran:" },
       {
         type: "list",
         items: [
@@ -416,12 +349,13 @@ export const projects: Project[] = [
   },
   {
     slug: "coachs-choice",
-    title: "Coach's Choice",
+    title: "Social Media iOS App for Athletes",
+    brand: "Coach's Choice",
     emoji: "🏅",
     year: "2020",
     tagline:
-      "Shipped social media app for athletes to the App Store. Built the React Native front-end with Firebase backend, in partnership with my brother.",
-    stack: ["React Native", "Firebase"],
+      "Built and shipped a social media iOS app for athletes. React Native front-end, Firebase backend, co-built with my brother. Live on the App Store.",
+    stack: ["React Native", "Firebase", "Xcode"],
     links: [],
     accent: "#10b981",
     body: [
@@ -430,46 +364,60 @@ export const projects: Project[] = [
         type: "p",
         text: "Coach's Choice is a social media app built specifically for athletes — competitive athletes connecting with coaches, sharing training footage, and managing their sports identity online.",
       },
-      { type: "h2", text: "My Role" },
+      { type: "h2", text: "What I Built" },
       {
         type: "p",
         text: "I built and shipped the React Native front-end. My brother built most of the backend logic. We shipped together to the App Store.",
       },
       { type: "h2", text: "Stack" },
-      {
-        type: "p",
-        text: "React Native · Firebase (auth, realtime database, storage) · Xcode",
-      },
+      { type: "p", text: "React Native · Firebase (auth, realtime database, storage) · Xcode" },
     ],
   },
   {
     slug: "refraction",
-    title: "Refraction AI — Sales Tracker",
+    title: "Yelp API + Mapbox Isochrones for Autonomous Robot Deliveries",
+    brand: "Refraction AI — REV-1",
     emoji: "🗺️",
     year: "2021",
     tagline:
-      "Built a custom sales territory tool with Python and Mapbox that surfaced 200+ new potential clients for Refraction AI's autonomous delivery robots.",
-    stack: ["Python", "Mapbox", "React"],
+      "Built a Python tool that pulled all restaurants in a radius from the Yelp API, then used Mapbox isochrones to map which ones the REV-1 delivery robots could actually reach reliably given hills and speed. Surfaced 200+ new leads.",
+    stack: ["Python", "Yelp API", "Mapbox Isochrone API"],
     links: [],
     accent: "#eab308",
     body: [
       { type: "h2", text: "Context" },
       {
         type: "p",
-        text: "Refraction AI operates autonomous delivery robots (the REV-1) for last-mile logistics. As a Product Associate on the go-to-market side, I was responsible for identifying new commercial partners near our operational routes — but the existing tooling made it hard to see which prospects were actually reachable by our fleet.",
+        text: "Refraction AI operates autonomous delivery robots (the REV-1) for last-mile logistics. As a Product Associate on the go-to-market side, I needed to identify commercial partners near our operational routes — but the existing tooling couldn't answer the real question: \"can the robot actually get there reliably?\"",
       },
       { type: "h2", text: "What I Built" },
       {
         type: "p",
-        text: "A custom sales territory visualization tool using Python and Mapbox. It layered our operational radius onto a live map of prospect businesses, letting the sales team filter by distance, category, and signal. I built it to cut research time from hours to minutes.",
+        text: "A two-step Python pipeline:",
+      },
+      {
+        type: "list",
+        items: [
+          "Step 1 — Yelp API: pulled all restaurants in a radius around our office (and the 78704 zip code when we expanded), including contact info so the sales team could start dialing immediately.",
+          "Step 2 — Mapbox Isochrone API: instead of a naive distance circle, generated isochrones — travel-time contours that account for hills and terrain. Flat ground at 15 mph is fine for the REV-1. A steep hill isn't. The isochrone told us which restaurants were actually reachable at robot speed with reliable delivery time.",
+        ],
+      },
+      {
+        type: "p",
+        text: "The output fed the sales team a ranked list of qualified prospects with contact info — and a visual map of our real operational footprint.",
+      },
+      { type: "h2", text: "Why It Mattered" },
+      {
+        type: "p",
+        text: "Before this: the sales team manually searched Google Maps, guessed at which places were reachable, and spent hours per lead. After: a filtered list of pre-qualified prospects with phone numbers, ready to call.",
       },
       { type: "h2", text: "Results" },
       {
         type: "list",
         items: [
           "Surfaced 200+ new potential clients in the first deployment",
+          "Replaced manual Google Maps research with API-driven prospecting",
           "Improved customer retention rates by 25% through product enhancements based on user feedback",
-          "Shifted the sales team's daily workflow from manual Google Maps research to map-driven prospecting",
         ],
       },
     ],
@@ -479,3 +427,22 @@ export const projects: Project[] = [
 export function getProject(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug);
 }
+
+// Smaller "Also built" projects shown as a strip at the bottom of the homepage
+export type AlsoBuilt = {
+  title: string;
+  emoji: string;
+  description: string;
+  stack: string[];
+  href?: string;
+};
+
+export const alsoBuilt: AlsoBuilt[] = [
+  {
+    title: "OpenClaw",
+    emoji: "🤖",
+    description:
+      "My personal 24/7 AI agent infrastructure — multi-model routing, cron jobs, persistent memory, Telegram interface. The runtime underneath SwiftFit Sales Agent. Private.",
+    stack: ["Node.js", "GPT-5", "Claude", "Telegram", "ElevenLabs"],
+  },
+];
