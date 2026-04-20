@@ -41,6 +41,7 @@ export const projects: Project[] = [
     ],
     accent: "#f97316",
     featured: true,
+    hero: "/images/pipeline-lobster/pipeline_lobster_hero.png",
     body: [
       {
         type: "loom",
