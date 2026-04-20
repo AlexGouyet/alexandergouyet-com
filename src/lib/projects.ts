@@ -31,11 +31,11 @@ export const projects: Project[] = [
   {
     slug: "swift-fit-sales-agent",
     title: "AI Sales Agent for Corporate Wellness",
-    brand: "SwiftFit Sales Agent",
+    brand: "SwiftFit Sales Agent · powered by OpenClaw 🦞",
     emoji: "🤖",
     year: "2024 – Present",
     tagline:
-      "Built a full AI-powered sales agent for corporate wellness. A Claude Code plugin orchestrates HubSpot, Notion, Asana, Slack, and Gmail daily. Pipeline Lobster, the lead-to-proposal automation inside it, won the Sales Molty at Moltathon ATX 2025.",
+      "Built a full AI-powered sales agent for corporate wellness. A Claude Code plugin orchestrates HubSpot, Notion, Asana, Slack, and Gmail daily. 🏆 Won the Antler VC Hackathon (Feb 2024). Pipeline Lobster — the lead-to-proposal automation inside it — won the Sales Molty at Moltathon ATX 2025.",
     stack: ["Claude Code", "Node.js", "HubSpot", "Notion", "Asana", "Slack", "Vercel"],
     links: [
       { label: "Pipeline Lobster on GitHub", href: "https://github.com/AlexGouyet/pipeline-lobster" },
@@ -54,7 +54,15 @@ export const projects: Project[] = [
       { type: "h2", text: "What It Is" },
       {
         type: "p",
-        text: "SwiftFit Sales Agent is an AI-powered sales operations system I built from scratch for Swift Fit Events. It has two halves: a Claude Code plugin that runs the team's daily sales workflow, and Pipeline Lobster — an automation that turns a lead signal into a deployed, interactive proposal in 13 seconds.",
+        text: "SwiftFit Sales Agent is an AI-powered sales operations system I built from scratch for Swift Fit Events, running on top of my personal OpenClaw agent infrastructure. It has two halves: a Claude Code plugin that runs the team's daily sales workflow, and Pipeline Lobster — an automation that turns a lead signal into a deployed, interactive proposal in 13 seconds.",
+      },
+      { type: "h2", text: "Awards" },
+      {
+        type: "list",
+        items: [
+          "🏆 Winner — Antler VC Hackathon (February 2024)",
+          "🏆 Winner — Sales Molty, Moltathon ATX 2025 (Pipeline Lobster)",
+        ],
       },
       { type: "h2", text: "Half 1 — Claude Code Plugin (daily ops)" },
       {
@@ -144,12 +152,12 @@ export const projects: Project[] = [
   },
   {
     slug: "grape",
-    title: "Real-Time Powdery Mildew Detection at Vine Scale",
-    brand: "Grape.ag",
+    title: "Real-Time Powdery Mildew Detection for Vineyard Microclimates",
+    brand: "Grape.ag · 2020 Summer Intern Team",
     emoji: "🍇",
     year: "2020 – 2021",
     tagline:
-      "Built the Python algorithm implementing UC Davis powdery mildew research at per-vine scale. Ran on AWS Lambda every 15 minutes, populating the shipped iOS app for vineyard owners.",
+      "Helped ship a production pipeline that runs UC Davis's powdery mildew risk model per vine, every 15 minutes. My piece: the Python algorithm on AWS Lambda, feeding the React Native iOS app that vineyard owners use in the field.",
     stack: ["Python", "pandas", "AWS Lambda", "React Native"],
     links: [
       { label: "GitHub", href: "https://github.com/AlexGouyet/Grape" },
@@ -227,12 +235,12 @@ export const projects: Project[] = [
   },
   {
     slug: "drones",
-    title: "From Hardware Hacks to a National UAV Podium",
-    brand: "Drones — MakeX → McGill AERO",
+    title: "Real-Time Solar Panel Efficiency Analysis via UAV / Infrared Camera",
+    brand: "McGill AERO Drones · 2019 Team",
     emoji: "🚁",
     year: "2016 – 2021",
     tagline:
-      "Built drones from scratch. Soldered a $15 altitude-hold module into a Syma X8C (48K-view YouTube tutorial), hand-built my first quadcopter at MakeX Palo Alto, and flew Ardupilot-based hardware on McGill AERO's 2nd-place national UAV competition team.",
+      "Helped ship a two-UAV BVLOS system that surveys solar farms, identifies damaged or underperforming panels via FLIR thermal imaging, and flags them with physical markers for repair. 1-of-5 flight team · 2nd place at the Canadian national UAV competition · $5K prize · front-page Montreal Gazette feature I landed.",
     stack: ["Ardupilot", "Pixhawk", "Soldering", "Python", "HTC Vive VR GCS"],
     links: [
       { label: "YouTube tutorial", href: "https://www.youtube.com/watch?v=hrPOWMnhVgA" },
@@ -277,7 +285,7 @@ export const projects: Project[] = [
       },
       {
         type: "p",
-        text: "The team's 2019 entry for the Unmanned Systems Canada Student UAS Competition was a Beyond Visual Line of Sight (BVLOS) survey and payload-delivery system. Two aircraft working together:",
+        text: "The team's 2019 entry was a real-time solar panel efficiency analysis system for the Unmanned Systems Canada Student UAS Competition. The challenge: autonomously survey a solar farm, identify damaged or underperforming panels using thermal imaging, and deliver a physical marker to flag each one for repair — all Beyond Visual Line of Sight (BVLOS). Two aircraft working together:",
       },
       {
         type: "image",
@@ -390,6 +398,7 @@ export const projects: Project[] = [
         type: "image",
         src: "/images/refraction/refraction_hero.JPG",
         alt: "Alexander with the Refraction REV-1 delivery robot",
+        aspect: "square",
         caption: "On the route with a REV-1.",
       },
       { type: "h2", text: "Context" },

@@ -83,11 +83,11 @@ export function ProjectsGrid() {
                 <p className="text-sm text-[color:var(--fg-dim)] leading-relaxed mb-4 mt-3">
                   {p.tagline}
                 </p>
-                <div className="flex flex-wrap gap-1.5">
-                  {p.stack.slice(0, 5).map((t) => (
+                <div className="flex flex-wrap gap-2">
+                  {p.stack.slice(0, 6).map((t) => (
                     <span
                       key={t}
-                      className="text-xs font-mono px-2.5 py-1 rounded-md border border-[color:var(--border)] text-[color:var(--fg-dim)]"
+                      className="text-sm font-mono px-3 py-1.5 rounded-lg border border-[color:var(--border)] text-[color:var(--fg-dim)]"
                     >
                       {t}
                     </span>
