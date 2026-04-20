@@ -12,7 +12,7 @@ export function ProjectsGrid() {
           Projects
         </div>
         <div className="text-[color:var(--fg-dim)] text-lg max-w-3xl">
-          Seven things I&apos;ve shipped across the last ten years. Some have live demos, some
+          Four projects I&apos;ve shipped across the last ten years. Some have live demos, some
           have App Store links, some are case studies.
         </div>
       </div>
