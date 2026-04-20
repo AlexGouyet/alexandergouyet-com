@@ -35,7 +35,7 @@ export const projects: Project[] = [
     emoji: "🤖",
     year: "2024 – Present",
     tagline:
-      "Built a full AI-powered sales agent for corporate wellness. A Claude Code plugin orchestrates HubSpot, Notion, Asana, Slack, and Gmail daily. 🏆 Won the Antler VC Hackathon (Feb 2024). Pipeline Lobster — the lead-to-proposal automation inside it — won the Sales Molty at Moltathon ATX 2025.",
+      "Built a full AI-powered sales agent for corporate wellness. A Claude Code plugin orchestrates HubSpot, Notion, Asana, Slack, and Gmail daily. Pipeline Lobster — the lead-to-proposal automation inside it — 🏆 won the Sales Molty at the Antler VC / Moltathon ATX 2026 Hackathon.",
     stack: ["Claude Code", "Node.js", "HubSpot", "Notion", "Asana", "Slack", "Vercel"],
     links: [
       { label: "Pipeline Lobster on GitHub", href: "https://github.com/AlexGouyet/pipeline-lobster" },
@@ -56,12 +56,11 @@ export const projects: Project[] = [
         type: "p",
         text: "SwiftFit Sales Agent is an AI-powered sales operations system I built from scratch for Swift Fit Events, running on top of my personal OpenClaw agent infrastructure. It has two halves: a Claude Code plugin that runs the team's daily sales workflow, and Pipeline Lobster — an automation that turns a lead signal into a deployed, interactive proposal in 13 seconds.",
       },
-      { type: "h2", text: "Awards" },
+      { type: "h2", text: "Award" },
       {
         type: "list",
         items: [
-          "🏆 Winner — Antler VC Hackathon (February 2024)",
-          "🏆 Winner — Sales Molty, Moltathon ATX 2025 (Pipeline Lobster)",
+          "🏆 Pipeline Lobster won the Sales Molty at the Antler VC / Moltathon ATX 2026 Hackathon",
         ],
       },
       { type: "h2", text: "Half 1 — Claude Code Plugin (daily ops)" },
@@ -81,7 +80,7 @@ export const projects: Project[] = [
       { type: "h2", text: "Half 2 — Pipeline Lobster (lead → proposal)" },
       {
         type: "p",
-        text: "Pipeline Lobster is the lead-to-proposal automation that won the Sales Molty at Moltathon ATX 2025. Built solo in ~6 hours.",
+        text: "Pipeline Lobster is the lead-to-proposal automation that won the Sales Molty at the Antler VC / Moltathon ATX 2026 Hackathon. Built solo in ~6 hours.",
       },
       {
         type: "quote",
@@ -111,7 +110,7 @@ export const projects: Project[] = [
       {
         type: "list",
         items: [
-          "🏆 Pipeline Lobster won the Sales Molty at Moltathon ATX 2025",
+          "🏆 Pipeline Lobster won the Sales Molty at the Antler VC / Moltathon ATX 2026 Hackathon",
           "Full team uses the Claude Code plugin daily across every sales stage",
           "Live proposals shipped for Base Power, Apptronik, Yeti Coolers, CesiumAstro",
           "Sourced and closed wellness activations for 30+ corporate clients including Morgan Stanley, Google, Prudential, Experian, PayPal, and CVS",
