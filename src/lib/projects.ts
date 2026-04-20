@@ -384,7 +384,14 @@ export const projects: Project[] = [
     stack: ["Python", "Yelp API", "Mapbox Isochrone API"],
     links: [],
     accent: "#eab308",
+    hero: "/images/refraction/refraction_hero.JPG",
     body: [
+      {
+        type: "image",
+        src: "/images/refraction/refraction_hero.JPG",
+        alt: "Alexander with the Refraction REV-1 delivery robot",
+        caption: "On the route with a REV-1.",
+      },
       { type: "h2", text: "Context" },
       {
         type: "p",
@@ -401,6 +408,12 @@ export const projects: Project[] = [
           "Step 1 — Yelp API: pulled all restaurants in a radius around our office (and the 78704 zip code when we expanded), including contact info so the sales team could start dialing immediately.",
           "Step 2 — Mapbox Isochrone API: instead of a naive distance circle, generated isochrones — travel-time contours that account for hills and terrain. Flat ground at 15 mph is fine for the REV-1. A steep hill isn't. The isochrone told us which restaurants were actually reachable at robot speed with reliable delivery time.",
         ],
+      },
+      {
+        type: "image",
+        src: "/images/refraction/refraction_isocrone.png",
+        alt: "Mapbox isochrone showing robot-reachable territory",
+        caption: "A Mapbox isochrone — the colored region shows everywhere the REV-1 could actually reach in a given travel time, accounting for hills and routing, not just radial distance.",
       },
       {
         type: "p",
