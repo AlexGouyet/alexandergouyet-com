@@ -36,7 +36,7 @@ export const projects: Project[] = [
     year: "2024 – Present",
     tagline:
       "Built a full AI-powered sales agent for corporate wellness. A Claude Code plugin orchestrates HubSpot, Notion, Asana, Slack, and Gmail daily. Pipeline Lobster — the lead-to-proposal automation inside it — 🏆 won the Sales Molty at the Antler VC / Moltathon ATX 2026 Hackathon.",
-    stack: ["Claude Code", "Node.js", "HubSpot", "Notion", "Asana", "Slack", "Vercel"],
+    stack: ["Claude Code", "Node.js", "TypeScript", "React", "Vite", "Tailwind", "HubSpot", "Notion", "Vercel"],
     links: [
       { label: "Pipeline Lobster on GitHub", href: "https://github.com/AlexGouyet/pipeline-lobster" },
       { label: "Loom demo", href: "https://www.loom.com/share/770f552c35b645fd87a88579e30f035e" },
@@ -77,6 +77,7 @@ export const projects: Project[] = [
           "Slack + Gmail + Asana orchestration for communications and task management",
         ],
       },
+      { type: "p", text: "Includes an interactive client-facing proposal builder (React + TypeScript + Vite + Tailwind) — prospects adjust headcount, toggle upgrades, and see pricing recalculate live instead of getting a dead PDF." },
       { type: "h2", text: "Half 2 — Pipeline Lobster (lead → proposal)" },
       {
         type: "p",
@@ -116,37 +117,6 @@ export const projects: Project[] = [
           "Sourced and closed wellness activations for 30+ corporate clients including Morgan Stanley, Google, Prudential, Experian, PayPal, and CVS",
         ],
       },
-    ],
-  },
-  {
-    slug: "swift-proposal-builder",
-    title: "Interactive Proposal Builder for Corporate Events",
-    brand: "Swift Proposal Builder",
-    emoji: "📄",
-    year: "2025",
-    tagline:
-      "Built a client-facing, interactive proposal tool for Swift Fit Events. React + TypeScript + Vite + Tailwind. Lets prospects explore activations, adjust group size, and see pricing update live.",
-    stack: ["React", "TypeScript", "Vite", "Tailwind"],
-    links: [],
-    accent: "#06b6d4",
-    body: [
-      { type: "h2", text: "What It Is" },
-      {
-        type: "p",
-        text: "A client-facing proposal builder for Swift Fit Events. Instead of sending a static PDF that prospects skim once and forget, the proposal is an interactive web app — they adjust the headcount, toggle optional activations, explore bundles, and see pricing recalculate live.",
-      },
-      { type: "h2", text: "What I Built" },
-      {
-        type: "list",
-        items: [
-          "Full React + TypeScript front-end with Vite build pipeline",
-          "Interactive pricing engine driven off the Swift Fit activation catalog",
-          "Tailwind-based design system for on-brand, polished presentation",
-          "Deployed proposals at one-off URLs per prospect",
-        ],
-      },
-      { type: "h2", text: "Stack" },
-      { type: "p", text: "React · TypeScript · Vite · Tailwind CSS · Vercel" },
     ],
   },
   {
