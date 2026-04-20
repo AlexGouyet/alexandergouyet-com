@@ -339,32 +339,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "coachs-choice",
-    title: "Social Media iOS App for Athletes",
-    brand: "Coach's Choice",
-    emoji: "🏅",
-    year: "2020",
-    tagline:
-      "Built and shipped a social media iOS app for athletes. React Native front-end, Firebase backend, co-built with my brother. Live on the App Store.",
-    stack: ["React Native", "Firebase", "Xcode"],
-    links: [],
-    accent: "#10b981",
-    body: [
-      { type: "h2", text: "What It Is" },
-      {
-        type: "p",
-        text: "Coach's Choice is a social media app built specifically for athletes — competitive athletes connecting with coaches, sharing training footage, and managing their sports identity online.",
-      },
-      { type: "h2", text: "What I Built" },
-      {
-        type: "p",
-        text: "I built and shipped the React Native front-end. My brother built most of the backend logic. We shipped together to the App Store.",
-      },
-      { type: "h2", text: "Stack" },
-      { type: "p", text: "React Native · Firebase (auth, realtime database, storage) · Xcode" },
-    ],
-  },
-  {
     slug: "refraction",
     title: "Yelp API + Mapbox Isochrones for Autonomous Robot Deliveries",
     brand: "Refraction AI — REV-1",
