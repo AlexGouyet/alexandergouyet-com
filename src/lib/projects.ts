@@ -287,11 +287,11 @@ export const projects: Project[] = [
       { label: "Montreal Gazette", href: "https://montrealgazette.com/news/game-of-drones-high-flying-mcgill-ets-students-rule-the-air/" },
     ],
     accent: "#ec4899",
-    hero: "/images/Drones/alex_drones_hero.webp",
+    hero: "/images/drones/alex_drones_hero.webp",
     body: [
       {
         type: "image",
-        src: "/images/Drones/alex_drones_hero.webp",
+        src: "/images/drones/alex_drones_hero.webp",
         alt: "Alexander with drones",
       },
       { type: "h3", text: "Act 1 — MakeX Palo Alto (2016)" },
@@ -301,7 +301,7 @@ export const projects: Project[] = [
       },
       {
         type: "image",
-        src: "/images/Drones/china_drone.JPG",
+        src: "/images/drones/china_drone.JPG",
         alt: "Home-built quadcopter over the Great Wall of China",
         caption: "My home-built quadcopter malfunctioned over the Great Wall of China. Ended in a bloody finger.",
       },
@@ -318,7 +318,7 @@ export const projects: Project[] = [
       },
       {
         type: "image",
-        src: "/images/Drones/flight_line1.jpg",
+        src: "/images/drones/flight_line1.jpg",
         alt: "On the flight line at the national UAV competition",
         caption: "On the flight line — 1 of 5 selected to the competition flight team (2019 & 2020).",
       },
@@ -328,7 +328,7 @@ export const projects: Project[] = [
       },
       {
         type: "image",
-        src: "/images/Drones/drones_array.JPG",
+        src: "/images/drones/drones_array.JPG",
         alt: "The McGill AERO drone platform",
         caption: "The team's aircraft — a Tarot X6 hexacopter (the Carrier) and a DAYA 550 quadcopter (the Recce).",
       },
@@ -346,22 +346,22 @@ export const projects: Project[] = [
         type: "gallery",
         images: [
           {
-            src: "/images/Drones/drones_winter.JPG",
+            src: "/images/drones/drones_winter.JPG",
             alt: "Winter flight testing",
             caption: "Winter test",
           },
           {
-            src: "/images/Drones/flight_line4.JPG",
+            src: "/images/drones/flight_line4.JPG",
             alt: "On the flight line",
             caption: "Flight line",
           },
           {
-            src: "/images/Drones/flight_line2.jpg",
+            src: "/images/drones/flight_line2.jpg",
             alt: "On the flight line",
             caption: "Flight line",
           },
           {
-            src: "/images/Drones/flight_line3.webp",
+            src: "/images/drones/flight_line3.webp",
             alt: "On the flight line",
             caption: "Flight line",
           },
@@ -393,7 +393,7 @@ export const projects: Project[] = [
       },
       {
         type: "image",
-        src: "/images/Drones/MIAE_industry_dinner.jpg",
+        src: "/images/drones/MIAE_industry_dinner.jpg",
         alt: "MIAE industry dinner, Fall 2019",
         caption: "Fall 2019 — the industry dinner I curated. 40 of Montreal's leading aerospace professionals matched 1-on-1 with 40 of the top McGill aerospace students.",
       },
