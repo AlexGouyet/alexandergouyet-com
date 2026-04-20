@@ -54,34 +54,20 @@ export const projects: Project[] = [
       { type: "h2", text: "What It Is" },
       {
         type: "p",
-        text: "SwiftFit Sales Agent is an AI-powered sales operations system I built from scratch for Swift Fit Events, running on top of my personal OpenClaw agent infrastructure. It has two halves: a Claude Code plugin that runs the team's daily sales workflow, and Pipeline Lobster — an automation that turns a lead signal into a deployed, interactive proposal in 13 seconds.",
-      },
-      { type: "h2", text: "Award" },
-      {
-        type: "list",
-        items: [
-          "🏆 Pipeline Lobster won the Sales Molty at the Antler VC / Moltathon ATX 2026 Hackathon",
-        ],
-      },
-      { type: "h2", text: "Half 1 — Claude Code Plugin (daily ops)" },
-      {
-        type: "p",
-        text: "A production Claude Code plugin used daily by the full team. It orchestrates our real tools — HubSpot, Notion, Asana, Slack, Gmail — across the full sales cycle: discovery prep, call recap, proposal build, deal hygiene, pipeline review, weekly reporting.",
+        text: "SwiftFit Sales Agent is an AI-powered sales operations system I built from scratch for Swift Fit Events, running on top of my personal OpenClaw agent infrastructure. Three connected parts:",
       },
       {
         type: "list",
         items: [
-          "~20 skills covering every stage of the sales cycle",
-          "Live HubSpot integration for deal + contact hygiene automation",
-          "Notion-backed knowledge base (PARA framework) for client intel, lessons learned, and nuances",
-          "Slack + Gmail + Asana orchestration for communications and task management",
+          "Part 1 — Pipeline Lobster: lead signal → deployed, interactive proposal in 13 seconds. 🏆 Moltathon winner.",
+          "Part 2 — Custom Proposal Builder: React/TS client-facing app that replaces the static PDF",
+          "Part 3 — Claude Code Plugin: the daily sales workflow the team actually runs",
         ],
       },
-      { type: "p", text: "Includes an interactive client-facing proposal builder (React + TypeScript + Vite + Tailwind) — prospects adjust headcount, toggle upgrades, and see pricing recalculate live instead of getting a dead PDF." },
-      { type: "h2", text: "Half 2 — Pipeline Lobster (lead → proposal)" },
+      { type: "h2", text: "Part 1 — Pipeline Lobster" },
       {
         type: "p",
-        text: "Pipeline Lobster is the lead-to-proposal automation that won the Sales Molty at the Antler VC / Moltathon ATX 2026 Hackathon. Built solo in ~6 hours.",
+        text: "The lead-to-proposal automation. 🏆 Won the Sales Molty at the Antler VC / Moltathon ATX 2026 Hackathon. Built solo in ~6 hours.",
       },
       {
         type: "quote",
@@ -93,7 +79,7 @@ export const projects: Project[] = [
         items: [
           "Lead intelligence: Linkt AI API — entity search + enrichment (industry, HQ, employees, revenue, contacts)",
           "Pricing engine: CSV-driven 146-SKU catalog mapping group size + event type to recommended activations",
-          "Proposal generator: Handlebars HTML with inline CSS/JS — interactive quantity controls, toggle upgrades, live recalculation",
+          "Proposal generator: Handlebars HTML with inline CSS/JS — live recalculation",
           "Deployment: Vercel CLI deploying each proposal to its own URL (e.g. base-power.vercel.app)",
           "Notifications: Telegram Bot API with full pricing breakdown in chat",
         ],
@@ -105,6 +91,34 @@ export const projects: Project[] = [
           "Interactive pricing — client-side JS recalculating totals across 3 tiers with dynamic unit text (per-person / per-hour / flat) as quantities change",
           "Telegram message encoding — multi-byte emoji characters broke HTTP Content-Length until I switched from string.length to Buffer.byteLength",
           "Logo reliability — migrated from logo.dev (expired token) to Google Favicon V2 API for 100% uptime",
+        ],
+      },
+      { type: "h2", text: "Part 2 — Custom Proposal Builder" },
+      {
+        type: "p",
+        text: "A client-facing, interactive proposal tool. Prospects used to get a static PDF they'd skim once and forget. Now they get a live web app — adjust the headcount, toggle optional activations, explore bundles, and see pricing recalculate in real time.",
+      },
+      {
+        type: "list",
+        items: [
+          "Full React + TypeScript front-end with Vite build pipeline",
+          "Interactive pricing engine driven off the 146-SKU activation catalog",
+          "Tailwind-based design system for on-brand presentation",
+          "Deployed per prospect at its own Vercel URL",
+        ],
+      },
+      { type: "h2", text: "Part 3 — Claude Code Plugin" },
+      {
+        type: "p",
+        text: "A production Claude Code plugin used daily by the full team. It orchestrates our real tools — HubSpot, Notion, Asana, Slack, Gmail — across the full sales cycle: discovery prep, call recap, proposal build, deal hygiene, pipeline review, weekly reporting.",
+      },
+      {
+        type: "list",
+        items: [
+          "~20 skills covering every stage of the sales cycle",
+          "Live HubSpot integration for deal + contact hygiene automation",
+          "Notion-backed knowledge base (PARA framework) for client intel, lessons learned, and nuances",
+          "Slack + Gmail + Asana orchestration for communications and task management",
         ],
       },
       { type: "h2", text: "Impact" },
@@ -224,10 +238,10 @@ export const projects: Project[] = [
         src: "/images/drones/alex_drones_hero.webp",
         alt: "Alexander with drones",
       },
-      { type: "h3", text: "Act 1 — MakeX Palo Alto (2016)" },
+      { type: "h3", text: "Background — MakeX Palo Alto (2016)" },
       {
         type: "p",
-        text: "I built my first quadcopter from scratch at MakeX, the first student-led makerspace in the United States. While I was there I bought a stock Syma X8C — a $100 consumer quadcopter that notoriously lacked altitude hold — and figured out how to add it for $15 in parts. I filmed a tutorial on the mod. It's been up since and has 48K+ views.",
+        text: "MakeX is where it all began. I built my first quadcopter from scratch at MakeX — the first student-led makerspace in the United States. While I was there I bought a stock Syma X8C — a $100 consumer quadcopter that notoriously lacked altitude hold — and figured out how to add it for $15 in parts. I filmed a tutorial on the mod. It's been up since and has 48K+ views.",
       },
       {
         type: "image",
@@ -241,7 +255,7 @@ export const projects: Project[] = [
         title: "$15 Syma X8C Altitude Hold Upgrade",
         caption: "$15 altitude-hold mod tutorial. 48K+ views.",
       },
-      { type: "h3", text: "Act 2 — McGill AERO Drones (2017 – 2021)" },
+      { type: "h3", text: "McGill AERO Drones (2017 – 2021)" },
       {
         type: "p",
         text: "Joined McGill's AERO Drones team in 2017 as VP of Marketing. Over four years I grew the team's visibility, recruitment, and narrative. I was also selected 1-of-5 to the competition flight team two years running.",
@@ -300,7 +314,7 @@ export const projects: Project[] = [
         title: "McGill AERO 2019 competition recap",
         caption: "Competition recap video.",
       },
-      { type: "h3", text: "Act 3 — McGill Institute for Aerospace Engineering" },
+      { type: "h3", text: "McGill Institute for Aerospace Engineering" },
       {
         type: "p",
         text: "The AERO work led into me becoming President of the McGill Institute for Aerospace Engineering (MIAE). The remit expanded from one engineering team to an entire undergraduate aerospace community.",
