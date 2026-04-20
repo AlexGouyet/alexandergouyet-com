@@ -1,10 +1,56 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { projects, getProject, type Section } from "@/lib/projects";
 import { Footer } from "@/components/Footer";
 
+const SITE_URL = "https://alexandergouyet.com";
+
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const project = getProject(slug);
+  if (!project) return {};
+
+  const title = `${project.title} — Alexander Gouyet`;
+  const description = project.tagline;
+  const hero = project.hero
+    ? `${SITE_URL}${project.hero}`
+    : `${SITE_URL}/icon-512.png`;
+  const url = `${SITE_URL}/projects/${project.slug}`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: "Alexander Gouyet",
+      type: "article",
+      images: [
+        {
+          url: hero,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [hero],
+    },
+  };
 }
 
 function SectionBlock({ section }: { section: Section }) {
