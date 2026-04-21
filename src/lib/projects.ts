@@ -314,6 +314,17 @@ export const projects: Project[] = [
         title: "McGill AERO 2019 competition recap",
         caption: "Competition recap video.",
       },
+      { type: "h3", text: "The Full Engineering Paper" },
+      {
+        type: "p",
+        text: "Want the engineering detail? The full 15-page design paper we submitted to the 2019 Unmanned Systems Canada Student UAS Competition is embedded below. Specs, CONOPS, BVLOS strategy, survey methodology, risk management, budget.",
+      },
+      {
+        type: "pdf",
+        src: "/files/aero-mcgill-design-paper-2019.pdf",
+        title: "AERO McGill 2019 Design Paper",
+        caption: "AERO McGill — Unmanned Systems Canada 2019 Design Paper (15 pages).",
+      },
       { type: "h3", text: "McGill Institute for Aerospace Engineering" },
       {
         type: "p",
