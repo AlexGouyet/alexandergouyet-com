@@ -31,7 +31,7 @@ export const projects: Project[] = [
   {
     slug: "swift-fit-sales-agent",
     title: "AI Sales Agent for Corporate Wellness",
-    brand: "SwiftFit Sales Agent · powered by OpenClaw 🦞",
+    brand: "Swift Fit Sales Agent · powered by OpenClaw 🦞",
     emoji: "🤖",
     year: "2024 – Present",
     tagline:
@@ -54,7 +54,7 @@ export const projects: Project[] = [
       { type: "h2", text: "What It Is" },
       {
         type: "p",
-        text: "SwiftFit Sales Agent is an AI-powered sales operations system I built from scratch for Swift Fit Events, running on top of my personal OpenClaw agent infrastructure. Three connected parts:",
+        text: "Swift Fit Sales Agent is an AI-powered sales operations system I built from scratch for Swift Fit Events, running on top of my personal OpenClaw agent infrastructure. Three connected parts:",
       },
       {
         type: "list",
@@ -421,7 +421,7 @@ export const alsoBuilt: AlsoBuilt[] = [
     title: "OpenClaw",
     emoji: "🤖",
     description:
-      "My personal 24/7 AI agent infrastructure — multi-model routing, cron jobs, persistent memory, Telegram interface. The runtime underneath SwiftFit Sales Agent. Private.",
+      "My personal 24/7 AI agent infrastructure — multi-model routing, cron jobs, persistent memory, Telegram interface. The runtime underneath Swift Fit Sales Agent. Private.",
     stack: ["Node.js", "GPT-5", "Claude", "Telegram", "ElevenLabs"],
   },
 ];
