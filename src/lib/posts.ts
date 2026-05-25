@@ -57,8 +57,8 @@ export const posts: Post[] = [
       },
       {
         type: "image",
-        src: "/images/the-doorway/monitors.jpeg",
-        alt: "My current coding setup at 416 Congress Avenue — three monitors at 11:30 p.m.",
+        src: "/images/the-doorway/asl.jpeg",
+        alt: "Demoing my ASL hand-tracking prototype at 416 Congress Avenue — hands raised toward the screen, exposed brick wall behind",
       },
 
       { type: "h2", text: "The Moltathon" },
