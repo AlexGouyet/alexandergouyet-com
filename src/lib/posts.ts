@@ -43,12 +43,12 @@ export const posts: Post[] = [
       {
         type: "p",
         text:
-          "Howdy from 416 Congress Avenue! It is 11:30 p.m. on Saturday, May 23rd, and I am involuntarily experiencing the nonstop rumble of a fraternity party that has taken over the Speakeasy nightclub on the other side of a brick wall to my right.",
+          "Howdy from 416 Congress Avenue! It is 11:30 p.m. on Saturday, May 23rd, and the muffled music from a fraternity party at the Speakeasy nightclub next door is thudding through the brick wall to my right.",
       },
       {
         type: "p",
         text:
-          "Despite the deep bass, I am in a state of deep focus. My visual field is occupied by three monitors displaying a prototype of an app that can teach you American Sign Language by reading your hand movements. The thirty or so software engineers burning the midnight oil with me are working on the same project or something similar, the use cases ranging from cryptocurrency to car dealerships.",
+          "Despite the deep bass, I am in a state of deep focus. My visual field is occupied by three monitors displaying a prototype of my app that can teach you American Sign Language by reading your hand movements. The thirty or so software engineers burning the midnight oil with me are working on the same project or something similar, the use cases ranging from cryptocurrency to car dealerships.",
       },
       {
         type: "p",
