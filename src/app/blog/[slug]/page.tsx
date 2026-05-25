@@ -90,7 +90,7 @@ export default async function BlogPostPage({
             <img
               src={post.hero}
               alt={post.title}
-              className="w-full rounded-xl border border-[color:var(--border)]"
+              className="w-full max-h-[600px] object-contain mx-auto rounded-xl border border-[color:var(--border)]"
             />
           </figure>
         )}

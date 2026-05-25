@@ -29,7 +29,7 @@ export const posts: Post[] = [
     // Not rendered on the post page itself.
     excerpt: "",
     readingTime: "8 min read",
-    hero: "/images/the-doorway/monitors.jpeg",
+    hero: "/images/the-doorway/ribbon-cutting.jpg",
     body: [
       {
         type: "italic-p",
@@ -51,9 +51,11 @@ export const posts: Post[] = [
         text:
           "Before I can share how I ended up in a room full of this country's highest caliber programmers, and why I'm writing my first blog post in six years, I need to rewind a few months…",
       },
-
-      // TODO: drop a hero / photo here if you have one of the Gauntlet office at night
-      // { type: "image", src: "/images/the-doorway/gauntlet-night.jpg", alt: "Gauntlet HQ at night", caption: "416 Congress Avenue, ~11:30 p.m." },
+      {
+        type: "image",
+        src: "/images/the-doorway/monitors.jpeg",
+        alt: "My current coding setup at 416 Congress Avenue — three monitors at 11:30 p.m.",
+      },
 
       { type: "h2", text: "The Moltathon" },
       {
@@ -147,12 +149,6 @@ export const posts: Post[] = [
         type: "p",
         text:
           "I show up with one goal: talk with the Gauntlet admissions team. However, when I open the door, I am immediately recognized by several folks from the Chamber of Commerce. The Chamber of Commerce is highly intertwined with Swift Fit, as we tend to have the same clientele. I see Ash across the room but am instead roped into a conversation with people from the Chamber asking me about when Austin Yoga Festival is happening. I end up being whisked into an office tour of the building with all these non-technical people who keep referencing me because they know me from my work at Swift Fit.",
-      },
-      {
-        type: "image",
-        src: "/images/the-doorway/ribbon-cutting.jpg",
-        alt: "Austin Chamber of Commerce ribbon-cutting at 416 Congress Avenue — me center frame with the giant golden scissors",
-        size: "medium",
       },
       {
         type: "p",
