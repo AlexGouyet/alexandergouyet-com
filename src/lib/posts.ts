@@ -116,7 +116,7 @@ export const posts: Post[] = [
       {
         type: "p",
         text:
-          "I'm walking up to Modern Market with my Swift Fit colleagues for lunch. As I hold the door open for a gentleman who's coming out, I see his shirt, which says Gauntlet AI. I mention that I have a friend in the program, and he slows down and asks me about myself. I tell him about my recent hackathon win and the projects I've created with OpenClaw and Claude Code. His eyes perk up. He tells me his name is Matt, that he teaches at Gauntlet, and that I should really consider applying, given I have both technical chops and sales skills. He says that the next cohort starts 14 days from now, on the 27th.",
+          "I'm walking up to Modern Market with my Swift Fit colleagues for lunch. As I hold the door open for a gentleman who's coming out, I see his shirt, which says Gauntlet AI. I mention that I have a friend in the program, and he slows down and asks me about myself. I tell him about my recent hackathon win and the projects I've created with OpenClaw and Claude Code. His eyes perk up. His name is Matt, he teaches at Gauntlet, and he thinks I should really consider applying, given I have both technical chops and sales skills. He says that the next cohort starts 14 days from now, on the 27th.",
       },
 
       // TODO: optional photo here — the Modern Market storefront, or Matt's Gauntlet shirt if you have a candid
