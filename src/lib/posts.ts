@@ -162,7 +162,7 @@ export const posts: Post[] = [
       {
         type: "p",
         text:
-          'Drew asks me about why I want in. I tell him my story, show him the RAG knowledge layer built, and he says, "Alexander, you\'re saying all the right words. Do you want to start on Monday?" I say yes. He says, "All right, I\'ll send the offer shortly. You might be missing some technical skills. We put in all-nighters every single night. You\'re just gonna have to work 30% harder."',
+          "Drew asks me about why I want in. I tell him my story, show him the RAG knowledge layer built, and after several more probing questions about my other projects and drones experience, he tells me that he'll send over an acceptance letter shortly.",
       },
       { type: "p", text: "And just like that, I'm in!" },
 
