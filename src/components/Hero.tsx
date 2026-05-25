@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -21,6 +22,12 @@ export function Hero() {
           and corporate wellness.
         </h1>
         <div className="flex flex-wrap gap-4 text-sm text-[color:var(--fg-dim)]">
+          <Link
+            href="/blog"
+            className="hover:text-[color:var(--accent)] transition-colors"
+          >
+            Writing →
+          </Link>
           <a
             href="https://github.com/AlexGouyet"
             target="_blank"

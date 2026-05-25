@@ -2,6 +2,7 @@ export type Section =
   | { type: "h2"; text: string }
   | { type: "h3"; text: string }
   | { type: "p"; text: string }
+  | { type: "italic-p"; text: string }
   | { type: "quote"; text: string }
   | { type: "list"; items: string[] }
   | { type: "kv"; rows: { label: string; value: string }[] }
@@ -9,7 +10,7 @@ export type Section =
   | { type: "youtube"; id: string; title?: string; caption?: string }
   | { type: "loom"; id: string; title?: string; caption?: string }
   | { type: "pdf"; src: string; title?: string; caption?: string }
-  | { type: "image"; src: string; alt: string; caption?: string; aspect?: "square" | "video" | "portrait" }
+  | { type: "image"; src: string; alt: string; caption?: string; aspect?: "square" | "video" | "portrait"; size?: "small" | "medium" | "large" }
   | { type: "gallery"; images: { src: string; alt: string; caption?: string }[] };
 
 export type Project = {

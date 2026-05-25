@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="relative z-10 max-w-5xl mx-auto px-6 py-12 border-t border-[color:var(--border)] mt-16">
@@ -6,6 +8,12 @@ export function Footer() {
           Contact
         </div>
         <div className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-[color:var(--fg-dim)]">
+          <Link
+            href="/blog"
+            className="hover:text-[color:var(--accent)] transition-colors"
+          >
+            Writing
+          </Link>
           <a
             href="mailto:alexandergouyet@gmail.com"
             className="hover:text-[color:var(--accent)] transition-colors"
