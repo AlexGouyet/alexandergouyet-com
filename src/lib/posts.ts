@@ -57,7 +57,7 @@ export const posts: Post[] = [
       },
       {
         type: "image",
-        src: "/images/the-doorway/asl.jpeg",
+        src: "/images/the-doorway/monitors.jpeg",
         alt: "Demoing my ASL hand-tracking prototype at 416 Congress Avenue — hands raised toward the screen, exposed brick wall behind",
       },
 
