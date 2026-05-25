@@ -21,7 +21,7 @@ export async function generateMetadata({
   if (!post) return {};
 
   const title = `${post.title} — Alexander Gouyet`;
-  const description = post.excerpt;
+  const description = post.excerpt || post.subtitle || "";
   const hero = post.hero
     ? `${SITE_URL}${post.hero}`
     : `${SITE_URL}/icon-512.png`;
@@ -79,10 +79,16 @@ export default async function BlogPostPage({
           {post.readingTime && <span>· {post.readingTime}</span>}
         </div>
 
-        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-10 leading-[1.1]">
+        <h1 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4 leading-[1.1]">
           {post.emoji && <span className="mr-3">{post.emoji}</span>}
           {post.title}
         </h1>
+
+        {post.subtitle && (
+          <p className="text-lg md:text-xl text-[color:var(--fg-dim)] italic leading-relaxed mb-10">
+            {post.subtitle}
+          </p>
+        )}
 
         {post.hero && (
           <figure className="my-10">

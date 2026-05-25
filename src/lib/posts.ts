@@ -3,11 +3,13 @@ import type { Section } from "@/lib/projects";
 export type Post = {
   slug: string;
   title: string;
+  /** Optional subtitle/tagline shown directly under the H1 on the post page */
+  subtitle?: string;
   /** ISO-8601 date, e.g. "2026-05-24" */
   date: string;
   /** Short human-readable date for display, e.g. "May 24, 2026" */
   displayDate: string;
-  /** One-sentence summary used in the listing card + OG description */
+  /** One-sentence summary used in the listing card + OG description (falls back to subtitle if empty) */
   excerpt: string;
   /** Optional hero image path under /public — leave empty for emoji card fallback */
   hero?: string;
@@ -22,6 +24,8 @@ export const posts: Post[] = [
   {
     slug: "the-doorway",
     title: "The Doorway",
+    subtitle:
+      "A story about how showing up in person can open doors that seem to be closed.",
     date: "2026-05-24",
     displayDate: "May 24, 2026",
     // TODO: write your own one-sentence excerpt in your voice.
