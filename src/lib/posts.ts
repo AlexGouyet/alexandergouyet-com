@@ -75,7 +75,7 @@ export const posts: Post[] = [
       {
         type: "p",
         text:
-          "A week later, I was invited by my friend Alejandro to compete in my first hackathon, put on by AITX and the Applied AI Society at Antler Venture Capital. Alejandro is one of my good friends whom I met via Swift Fit. I hadn't seen him recently because he'd been accepted into this nebulous program called Gauntlet AI. I didn't know too much about it other than seeing his weekly LinkedIn posts showcasing the very impressive apps he was building.",
+          "A week later, I was invited by my friend Alejandro to compete in my first hackathon, put on by [AITX](https://www.linkedin.com/company/aitxmeetups) and the [Applied AI Society](https://appliedaisociety.org/) at Antler Venture Capital. Alejandro is one of my good friends whom I met via Swift Fit. I hadn't seen him recently because he'd been accepted into this nebulous program called Gauntlet AI. I didn't know too much about it other than seeing his weekly LinkedIn posts showcasing the very impressive apps he was building.",
       },
 
       // TODO: photo at the hackathon (Antler VC, the monitor setup, etc.)
@@ -116,7 +116,7 @@ export const posts: Post[] = [
       {
         type: "p",
         text:
-          "I'm walking up to Modern Market with my Swift Fit colleagues for lunch. As I hold the door open for a gentleman who's coming out, I see his shirt, which says Gauntlet AI. I tell him I have a friend in the program, and he slows down and asks me about myself. I tell him about my recent hackathon win and the projects I've created with OpenClaw and Claude Code. His eyes perk up. He tells me his name is Matt, that he teaches at Gauntlet, and that I should really consider applying, given I have both technical chops and sales skills. He says that the next cohort starts 14 days from now, on the 27th.",
+          "I'm walking up to Modern Market with my Swift Fit colleagues for lunch. As I hold the door open for a gentleman who's coming out, I see his shirt, which says Gauntlet AI. I mention that I have a friend in the program, and he slows down and asks me about myself. I tell him about my recent hackathon win and the projects I've created with OpenClaw and Claude Code. His eyes perk up. He tells me his name is Matt, that he teaches at Gauntlet, and that I should really consider applying, given I have both technical chops and sales skills. He says that the next cohort starts 14 days from now, on the 27th.",
       },
 
       // TODO: optional photo here — the Modern Market storefront, or Matt's Gauntlet shirt if you have a candid
