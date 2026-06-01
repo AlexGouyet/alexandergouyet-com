@@ -22,14 +22,14 @@ export type Post = {
 
 export const posts: Post[] = [
   {
-    slug: "high-standards-high-support",
+    slug: "gauntlet-part-two",
     title: "Gauntlet Part Two: High Standards, High Support",
     subtitle: "No Friction to Becoming AI Native",
     date: "2026-05-31",
     displayDate: "May 31, 2026",
     excerpt: "",
     readingTime: "6 min read",
-    hero: "/images/high-standards-high-support/byron-whiteboard.jpg",
+    hero: "/images/gauntlet-part-two/byron-whiteboard.jpg",
     body: [
       {
         type: "p",
@@ -56,7 +56,7 @@ export const posts: Post[] = [
       {
         type: "p",
         text:
-          "These first three weeks served as a way to weed out those who might have made it through the admissions process but later found out they just did not have the time or energy to commit to Gauntlet. In our very first meeting, there were around 90 attendees on the Google Meet. By the time we made it to week four, I'm pretty sure we were down to the mid-70s. This program is definitely not for the faint of heart, and I'm impressed by those who have families and other obligations to handle at the same time.",
+          "These first three weeks served as a way to weed out those who made it through the admissions process but later found out they just did not have the time or energy to commit to Gauntlet. In our very first meeting, there were around 90 attendees on the Google Meet. By the time we made it to week four, I'm pretty sure we were down to the mid-70s. This program is definitely not for the faint of heart, and I'm impressed by those who have families and other obligations to handle at the same time.",
       },
       {
         type: "p",
@@ -84,8 +84,8 @@ export const posts: Post[] = [
       },
       {
         type: "video",
-        src: "/images/high-standards-high-support/rope-swing.mp4",
-        poster: "/images/high-standards-high-support/rope-swing-poster.jpg",
+        src: "/images/gauntlet-part-two/rope-swing.mp4",
+        poster: "/images/gauntlet-part-two/rope-swing-poster.jpg",
         portrait: true,
         caption: "One last rope swing into the river before moving in.",
       },
@@ -129,7 +129,7 @@ export const posts: Post[] = [
       },
       {
         type: "image",
-        src: "/images/high-standards-high-support/byron-whiteboard.jpg",
+        src: "/images/gauntlet-part-two/byron-whiteboard.jpg",
         alt: "Byron walking me through Discriminated Union at the office whiteboard",
         caption: "Byron walking me through Discriminated Union",
       },
