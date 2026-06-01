@@ -160,7 +160,7 @@ export const posts: Post[] = [
   },
   {
     slug: "the-doorway",
-    title: "The Doorway",
+    title: "Gauntlet Part One: The Doorway",
     subtitle:
       "A story about how showing up in person can open doors that seem to be closed.",
     date: "2026-05-24",
