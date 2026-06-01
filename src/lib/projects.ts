@@ -10,6 +10,7 @@ export type Section =
   | { type: "youtube"; id: string; title?: string; caption?: string }
   | { type: "loom"; id: string; title?: string; caption?: string }
   | { type: "pdf"; src: string; title?: string; caption?: string }
+  | { type: "video"; src: string; poster?: string; caption?: string; portrait?: boolean }
   | { type: "image"; src: string; alt: string; caption?: string; aspect?: "square" | "video" | "portrait"; size?: "small" | "medium" | "large" }
   | { type: "gallery"; images: { src: string; alt: string; caption?: string }[] };
 

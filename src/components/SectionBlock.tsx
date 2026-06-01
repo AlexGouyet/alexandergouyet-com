@@ -157,6 +157,31 @@ export function SectionBlock({ section }: { section: Section }) {
           )}
         </figure>
       );
+    case "video":
+      return (
+        <figure className="my-8">
+          <div
+            className={`relative rounded-xl overflow-hidden border border-[color:var(--border)] bg-[color:var(--bg-card)] ${
+              section.portrait ? "max-w-sm mx-auto" : "w-full"
+            }`}
+          >
+            {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+            <video
+              src={section.src}
+              poster={section.poster}
+              controls
+              playsInline
+              preload="metadata"
+              className="w-full h-auto"
+            />
+          </div>
+          {section.caption && (
+            <figcaption className="text-xs text-[color:var(--fg-muted)] mt-2 font-mono text-center">
+              {section.caption}
+            </figcaption>
+          )}
+        </figure>
+      );
     case "pdf":
       return (
         <figure className="my-8">
