@@ -120,7 +120,7 @@ export const posts: Post[] = [
       {
         type: "p",
         text:
-          "And it's these three things that allow Gauntlet to help you achieve the ultimate goal of this program: get hired at a great company for a very high salary. And I don't know how the staff are compensated, but they clearly care a lot about us achieving this goal.",
+          "And it's these three things that allow Gauntlet to help you achieve the ultimate goal of this program: because of your superior level of applied AI skills, get hired at an amazing company for a great salary. I don't know how the staff are compensated, but they clearly care a lot about us achieving this goal.",
       },
       {
         type: "p",
