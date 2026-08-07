@@ -22,6 +22,189 @@ export type Post = {
 
 export const posts: Post[] = [
   {
+    slug: "gauntlet-part-three",
+    title: "Gauntlet Part Three: High Agency Gets You Hired",
+    subtitle: "The playbook I've now run three times.",
+    date: "2026-08-07",
+    displayDate: "August 7, 2026",
+    excerpt: "",
+    readingTime: "7 min read",
+    hero: "/images/gauntlet-part-three/cohort.jpg",
+    body: [
+      {
+        type: "p",
+        text:
+          "This is a conclusion to my time at Gauntlet, plus a look into the playbook to get my ideal role three times in recent years:",
+      },
+      {
+        type: "list",
+        items: [
+          "Swift Fit Events: A conversation with the founder ended with a role being created for me that hadn't existed before.",
+          "Gauntlet: Getting in front of an admissions team that had already passed on my application.",
+          "Texas Sports Academy: Like Swift Fit, a chance conversation led to me being brought onto a team that wasn't hiring for my talents.",
+        ],
+      },
+
+      { type: "h2", text: "The hiring floor" },
+      {
+        type: "p",
+        text:
+          "Weeks six through ten are when Gauntlet transitions from a school into a hiring floor.",
+      },
+      {
+        type: "p",
+        text:
+          "By this point you've learned the basics of AI engineering, cut your teeth on nasty brownfield projects like our Clinical Co-pilot, and you've been thoroughly grilled in mock interviews by Jon and Jevic. The new goal is: be ready for anything. A hiring partner can walk through the Gauntlet office at midnight, stop at your desk, ask what you're working on, and give you an offer on the spot.",
+      },
+      {
+        type: "p",
+        text:
+          "We got used to living in this always-on environment where you never quite know whether the next twenty minutes is a conversation or the interview that decides the next stage of your life. Gauntlet truly is one endless job interview.",
+      },
+      {
+        type: "p",
+        text:
+          "By week 7, I had a couple of interviews with companies that were a decent fit, but I knew deep down that if I was going to get a dream job, I'd have to go out of my way to network and be visible.",
+      },
+
+      { type: "h2", text: "Move 1: Be Visible" },
+      {
+        type: "p",
+        text:
+          "The first thing I did was get one of my side projects in front of an audience. I'd built a Jarvis-style voice app for frontline aircraft workers, and through a Gauntlet contact, got the opportunity to demo it at Anthropic's monthly Claude Code meetup.",
+      },
+      {
+        type: "link",
+        label: "Demoing the Jarvis app at Anthropic's Claude Code meetup",
+        href: "https://www.linkedin.com/feed/update/urn:li:activity:7470201887091458048/",
+        description: "Capital Factory, Austin",
+      },
+      {
+        type: "p",
+        text:
+          "I can't quantify the impact of this, but it definitely brought me a lot of goodwill within Gauntlet and within the Austin AI community.",
+      },
+
+      { type: "h2", text: "Move 2: Talk to Everyone" },
+      {
+        type: "p",
+        text:
+          "Gauntlet provides you a roster of hiring partners, and it's a great start, but you are always better served when doing your own research and chatting with every single person you meet. This is how I ended up briefly meeting a gentleman named Malekai at a mutual dinner with my friend Grace who was also in Gauntlet.",
+      },
+      {
+        type: "p",
+        text:
+          "Malekai is one of the founding team members at Texas Sports Academy. He's also a Gauntlet grad, and he was on the panel back in April that made me apply to Gauntlet in the first place, which I wrote about in [Part One](/blog/the-doorway) without knowing his name would end up mattering this much.",
+      },
+      {
+        type: "p",
+        text:
+          "We talked for a few minutes at that dinner, but I was genuinely intrigued by what he and his teammates were building and asked for a 30 minute call.",
+      },
+
+      { type: "h2", text: "Move 3: Have an Agenda + Prepare Extensively" },
+      {
+        type: "p",
+        text:
+          "In that 30-minute call, it was basically me interviewing Malekai about the intricacies of Texas Sports Academy's business model, their operational challenges, and other nuggets I had found by reading every single article I could on them. I had even created a NotebookLM that allowed me to wrap my head around the scope of their business and ask about different verticals that they might not have considered.",
+      },
+      {
+        type: "quote",
+        text:
+          'The goal is to have the person you\'re talking to say something like, "Huh, I haven\'t really thought of that before. That\'s a great question," because every single time you do that, you\'re revealing this hole in their understanding that they need to have filled, ideally by hiring someone like you.',
+      },
+      {
+        type: "p",
+        text:
+          "You're not asking to be given something, you're showing them in real time what it would be like to have you in the room.",
+      },
+      {
+        type: "p",
+        text:
+          'At the very end I finished with something like "Hey, I don\'t know if you\'re hiring, but if you\'re ever in the future, I\'d love to have that conversation."',
+      },
+      {
+        type: "p",
+        text:
+          "And then I let it go. Texas Sports Academy wasn't a hiring partner, they weren't interviewing anyone from my cohort. I expected nothing from it.",
+      },
+      {
+        type: "p",
+        text:
+          "A week went by with radio silence. Then I received a text from Malekai asking if I could come in to the Texas Sports Academy office and meet the team. This was blocked off for two hours but ran three and a half. I had conversations with each of the four founding team members, and every one of those conversations was genuinely fun, more tied to the long term vision of the business and hot takes on AI than any boring talk about the job itself.",
+      },
+      {
+        type: "p",
+        text:
+          "Later that week they extended me a formal offer. I got to create my own job title (AI Growth Engineer), a sign that it's more about the way I'm showing up and able to handle any problem on the spot than a specific hard skill in my resume.",
+      },
+
+      { type: "h2", text: "Main Lesson: Do Not Outsource Research" },
+      {
+        type: "p",
+        text:
+          "I've spent the past couple of months learning how to hand off work to machines and automate myself. The one thing I refuse to outsource is my research.",
+      },
+      {
+        type: "p",
+        text:
+          "I still believe I have to be the one actually doing it, uncovering the little nuggets about the company and the people I'm interviewing with, so that they get stamped down into my memory and can be accessed incredibly quickly on the spot. To the degree that I don't have to consult an AI for any of it.",
+      },
+      {
+        type: "p",
+        text:
+          "It shows up in small things that you can reference without hesitation, like a thirteen-year-old podcast that one of the founding team members recorded (he later told me that was the moment he decided to hire me).",
+      },
+
+      { type: "h2", text: "What Gauntlet actually taught me" },
+      {
+        type: "p",
+        text:
+          "Gauntlet took me from vibe coder to manager of my own software factory.",
+      },
+      { type: "p", text: "Concretely, I learned:" },
+      {
+        type: "list",
+        items: [
+          "Brownfield: how to walk into an existing, disorganized codebase, audit it, and inject AI without breaking the system.",
+          "Harnesses: how to get Opus-quality output from a Haiku-class model by building the scaffolding around it: tool calling, Pydantic schemas for structured output, and eval suites that prove the code is good and catch drift on every update. The harness does the work the bigger model would have done.",
+          "Tradeoffs: how to articulate the speed, cost and latency choices behind my software architecture to non-engineers.",
+          "Frontier models: staying up to date on the latest improvements, day after day.",
+          "CNNs: built my first convolutional neural network in a few hours. That was awesome.",
+          "Work rate: I learned I could work more, and smarter, than ever before.",
+        ],
+      },
+
+      { type: "h2", text: "Texas Sports Academy" },
+      {
+        type: "p",
+        text:
+          "The bet our team is making is that kids can finish their academics in about two hours a day on a mastery-based AI stack, and then spend the rest of the day training their sport.",
+      },
+      {
+        type: "p",
+        text:
+          "If you're a serious student athlete right now, your day is seven hours of school, then two or three hours of practice, then homework, and you're getting home at eleven at night. Our tech stack collapses that. By four in the afternoon the kids are done with everything, they're training more than they were before, and the family gets its evenings back.",
+      },
+      {
+        type: "p",
+        text:
+          "There are campuses across Texas run by operators like Jermaine O'Neal, plus a fully remote model for families nowhere near one of them. Most of it is funded by the Texas voucher, which means most families pay nothing.",
+      },
+      {
+        type: "p",
+        text:
+          "The goal I locked in on July 31 is to be ready to open my own school thirty days from now. In Austin.",
+      },
+      {
+        type: "link",
+        label: "Texas Sports Academy",
+        href: "https://sportsacademy.school",
+        description: "Accelerated academics, elite athletics. Campuses across Texas, plus a fully remote program.",
+      },
+    ],
+  },
+  {
     slug: "gauntlet-part-two",
     title: "Gauntlet Part Two: High Standards, High Support",
     subtitle: "No Friction to Becoming AI Native",
