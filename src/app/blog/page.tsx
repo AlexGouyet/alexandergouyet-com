@@ -8,11 +8,11 @@ const SITE_URL = "https://alexandergouyet.com";
 export const metadata: Metadata = {
   title: "Writing — Alexander Gouyet",
   description:
-    "Notes from the field — Gauntlet AI, agent infrastructure, sales pipelines, and the chapter I'm currently inside.",
+    "Notes from the field. Gauntlet AI, agent infrastructure, sales pipelines, and the chapter I'm currently inside.",
   openGraph: {
     title: "Writing — Alexander Gouyet",
     description:
-      "Notes from the field — Gauntlet AI, agent infrastructure, sales pipelines, and the chapter I'm currently inside.",
+      "Notes from the field. Gauntlet AI, agent infrastructure, sales pipelines, and the chapter I'm currently inside.",
     url: `${SITE_URL}/blog`,
     siteName: "Alexander Gouyet",
     type: "website",
@@ -39,8 +39,9 @@ export default function BlogIndexPage() {
           Notes from the field
         </h1>
         <p className="text-lg text-[color:var(--fg-dim)] leading-relaxed mb-12">
-          A series I&apos;m publishing weekly from inside Gauntlet AI&apos;s G5 cohort.
-          Texture from the build, the cohort, and the chapter I&apos;m currently inside.
+          A three-part series from inside Gauntlet AI&apos;s G5 cohort: getting in, what
+          the program actually does, and the playbook that got me hired. More from
+          whatever chapter I&apos;m currently inside.
         </p>
 
         <div className="border-t border-[color:var(--border)]">

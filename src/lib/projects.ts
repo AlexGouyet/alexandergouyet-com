@@ -33,7 +33,7 @@ export const projects: Project[] = [
   {
     slug: "swift-fit-sales-agent",
     title: "AI Sales Agent for Corporate Wellness",
-    brand: "Swift Fit Sales Agent · powered by OpenClaw 🦞",
+    brand: "Swift Fit Sales Agent",
     emoji: "🤖",
     year: "2024 – Present",
     tagline:
