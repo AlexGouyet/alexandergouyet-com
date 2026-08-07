@@ -37,9 +37,14 @@ html, body {
   color: #0a0a0b;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+/* Must live in @layer base. Unlayered rules beat Tailwind's @layer utilities
+   regardless of specificity, so an unlayered `a { color: inherit }` silently
+   overrides every text-[color:...] utility applied to a link. */
+@layer base {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 body::before {
