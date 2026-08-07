@@ -2,14 +2,17 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { HeroScene } from "@/components/HeroScene";
 
 export function Hero() {
   return (
-    <section className="relative z-10 max-w-5xl mx-auto px-6 pt-24 pb-16 md:pt-32 md:pb-24">
+    <section className="relative z-10 mx-auto min-h-[88vh] w-full max-w-5xl px-6 pt-24 pb-16 md:pt-32 md:pb-24 flex items-center">
+      <HeroScene />
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
+        className="relative z-10"
       >
         <div className="text-xs uppercase tracking-[0.2em] text-[color:var(--fg-muted)] mb-6 font-mono">
           Alexander Gouyet · Austin, TX
@@ -21,10 +24,10 @@ export function Hero() {
           <span className="text-[color:var(--accent)]">mobile apps</span> across drones, agtech,
           and corporate wellness.
         </h1>
-        <div className="flex flex-wrap gap-4 text-sm text-[color:var(--fg-dim)]">
+        <div className="flex flex-wrap items-center gap-x-5 gap-y-3 text-sm text-[color:var(--fg-dim)]">
           <Link
             href="/blog"
-            className="hover:text-[color:var(--accent)] transition-colors"
+            className="inline-flex items-center gap-2 rounded-full border border-[color:var(--accent)]/40 px-4 py-1.5 text-[color:var(--accent)] hover:border-[color:var(--accent)] hover:bg-[color:var(--accent)]/10 transition-colors"
           >
             Writing →
           </Link>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { projects } from "@/lib/projects";
+import { TiltCard } from "@/components/TiltCard";
 
 export function ProjectsGrid() {
   return (
@@ -26,15 +27,25 @@ export function ProjectsGrid() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.45, delay: i * 0.05, ease: "easeOut" }}
           >
+            <TiltCard className="h-full">
             <Link
               href={`/projects/${p.slug}`}
-              className="group block h-full rounded-2xl border border-[color:var(--border)] bg-[color:var(--bg-card)] overflow-hidden transition-all hover:border-[color:var(--fg-muted)] hover:bg-[color:var(--bg-raised)]"
+              className="group relative block h-full rounded-2xl border border-[color:var(--border)] bg-[color:var(--bg-card)] overflow-hidden transition-all hover:border-[color:var(--fg-muted)] hover:bg-[color:var(--bg-raised)] hover:shadow-[0_30px_60px_-25px_rgba(0,0,0,0.8)]"
               style={
                 {
                   "--card-accent": p.accent,
                 } as React.CSSProperties
               }
             >
+              {/* Cursor-following accent glow */}
+              <span
+                aria-hidden
+                className="pointer-events-none absolute inset-0 z-20 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                style={{
+                  background:
+                    "radial-gradient(420px circle at var(--mx,50%) var(--my,50%), color-mix(in srgb, var(--card-accent) 22%, transparent), transparent 60%)",
+                }}
+              />
               {p.hero ? (
                 <div className="relative aspect-[16/10] overflow-hidden bg-[color:var(--bg-raised)]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -95,6 +106,7 @@ export function ProjectsGrid() {
                 </div>
               </div>
             </Link>
+            </TiltCard>
           </motion.div>
         ))}
       </div>
