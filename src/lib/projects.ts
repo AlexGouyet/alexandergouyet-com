@@ -421,20 +421,3 @@ export function getProject(slug: string): Project | undefined {
 }
 
 // Smaller "Also built" projects shown as a strip at the bottom of the homepage
-export type AlsoBuilt = {
-  title: string;
-  emoji: string;
-  description: string;
-  stack: string[];
-  href?: string;
-};
-
-export const alsoBuilt: AlsoBuilt[] = [
-  {
-    title: "OpenClaw",
-    emoji: "🤖",
-    description:
-      "My personal 24/7 AI agent infrastructure — multi-model routing, cron jobs, persistent memory, Telegram interface. The runtime underneath Swift Fit Sales Agent. Private.",
-    stack: ["Node.js", "GPT-5", "Claude", "Telegram", "ElevenLabs"],
-  },
-];

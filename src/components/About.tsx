@@ -7,12 +7,34 @@ export function About() {
         </div>
         <div className="space-y-6 text-lg text-[color:var(--fg-dim)] leading-relaxed max-w-3xl">
           <p className="text-[color:var(--fg)]">
-            Builder and sales operator based in Austin.
+            AI Growth Engineer at{" "}
+            <a
+              href="https://sportsacademy.school"
+              className="text-[color:var(--accent)] hover:underline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Texas Sports Academy
+            </a>
+            , based in Austin.
           </p>
           <p>
-            I&apos;ve shipped iOS apps, got McGill AERO Drones on the front page of the{" "}
-            <em>Montreal Gazette</em>, podiumed in national UAV competitions, and most recently
-            built AI-first sales systems — including{" "}
+            We run schools where student athletes finish their academics in about two hours a
+            day on a mastery-based AI stack, then spend the rest of the day training their
+            sport. Campuses across Texas, plus a fully remote program. I got here through
+            Gauntlet AI, which I wrote about{" "}
+            <a
+              href="/blog"
+              className="text-[color:var(--accent)] hover:underline"
+            >
+              here
+            </a>
+            .
+          </p>
+          <p>
+            Before that, I shipped iOS apps, got McGill AERO Drones on the front page of the{" "}
+            <em>Montreal Gazette</em>, podiumed in national UAV competitions, and built
+            AI-first sales systems including{" "}
             <a
               href="https://github.com/AlexGouyet/pipeline-lobster"
               className="text-[color:var(--accent)] hover:underline"
