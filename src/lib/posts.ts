@@ -55,10 +55,10 @@ export const posts: Post[] = [
       },
       {
         type: "video",
-        src: "/images/rocky/build-reel.mp4",
-        poster: "/images/rocky/build-reel-poster.jpg",
+        src: "/images/rocky/rocky-demo.mp4",
+        poster: "/images/rocky/rocky-demo-poster.jpg",
         portrait: true,
-        caption: "Build day, 30 seconds",
+        caption: "Meet Rocky (5 min)",
       },
 
       { type: "h2", text: "What Rocky is" },
@@ -91,6 +91,13 @@ export const posts: Post[] = [
         src: "/images/rocky/explorer-exploded.jpg",
         alt: "Exploded view of Rocky's CAD model in the parts explorer",
         caption: "The parts explorer: every piece of Rocky, pulled apart",
+      },
+      {
+        type: "video",
+        src: "/images/rocky/build-reel.mp4",
+        poster: "/images/rocky/build-reel-poster.jpg",
+        portrait: true,
+        caption: "Build day, 30 seconds",
       },
 
       { type: "h2", text: "Printing" },
