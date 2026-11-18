@@ -211,9 +211,9 @@ export function SectionBlock({ section }: { section: Section }) {
       // size overrides default width — small ≈ 25%, medium ≈ 50%, large = full
       const sizeClass =
         section.size === "small"
-          ? "max-w-[200px] mx-auto"
+          ? "w-full max-w-[200px] mx-auto"
           : section.size === "medium"
-          ? "max-w-md mx-auto"
+          ? "w-full max-w-md mx-auto"
           : section.size === "large"
           ? "w-full"
           : section.aspect === "square"

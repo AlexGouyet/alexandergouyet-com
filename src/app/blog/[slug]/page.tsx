@@ -4,6 +4,9 @@ import type { Metadata } from "next";
 import { posts, getPost } from "@/lib/posts";
 import { Footer } from "@/components/Footer";
 import { SectionBlock } from "@/components/SectionBlock";
+import { PromptYourClaude } from "@/components/PromptYourClaude";
+import { readFileSync } from "node:fs";
+import path from "node:path";
 
 const SITE_URL = "https://alexandergouyet.com";
 
@@ -64,8 +67,20 @@ export default async function BlogPostPage({
   const post = getPost(slug);
   if (!post) notFound();
 
+  const masterPrompt = post.masterPrompt
+    ? readFileSync(path.join(process.cwd(), "public", post.masterPrompt.href), "utf8")
+    : null;
+
   return (
     <main className="relative z-10 flex-1 w-full">
+      {post.masterPrompt && masterPrompt && (
+        <PromptYourClaude
+          prompt={masterPrompt}
+          href={post.masterPrompt.href}
+          subject={post.masterPrompt.subject}
+          label={post.masterPrompt.label}
+        />
+      )}
       <article className="max-w-3xl mx-auto px-6 pt-16 pb-20">
         <Link
           href="/blog"

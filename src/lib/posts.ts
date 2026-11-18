@@ -18,9 +18,230 @@ export type Post = {
   /** Optional reading-time hint, e.g. "8 min read" */
   readingTime?: string;
   body: Section[];
+  /**
+   * Optional "Prompt your Claude" button pinned top right. `href` is a raw text
+   * file under /public (e.g. "/prompts/rocky.md") holding the master prompt.
+   */
+  masterPrompt?: { href: string; subject: string; label?: string };
 };
 
 export const posts: Post[] = [
+  {
+    slug: "rocky",
+    title: "I Built a Five-Legged Robot with Claude",
+    subtitle: "Rocky: from a Project Hail Mary idea to a robot that walks, talks and waves.",
+    date: "2026-11-17",
+    displayDate: "November 17, 2026",
+    excerpt:
+      "The whole build of Rocky, a 3D-printed five-legged desk robot, and a one-click master prompt so your Claude can walk you through building your own.",
+    readingTime: "9 min read",
+    hero: "/images/rocky/hero.jpg",
+    masterPrompt: { href: "/prompts/rocky.md", subject: "Rocky, a five-legged 3D-printed desk robot" },
+    body: [
+      {
+        type: "p",
+        text:
+          "This is Rocky. He's a five-legged robot shaped like a rock, about 18 cm across, modeled after Rocky from Project Hail Mary. He walks, sits, waves, dances, has a glowing eye with moods, and you can talk to him. I designed him with Claude over about six weeks and built him in one.",
+      },
+      {
+        type: "p",
+        text:
+          "I'm not a hardware engineer. I didn't flash the firmware, pick the pins or write the gait code. Claude did. My job was to make decisions, hold the soldering iron and tell it when it was wrong (often). This post is the whole build, what went right, what went badly, and the rules I'd give anyone doing this with Claude.",
+      },
+      {
+        type: "italic-p",
+        text:
+          "Want to build your own? Hit the Prompt your Claude button in the top right. It opens Claude with a master prompt that walks your Claude through the entire build: parts, CAD, printing, wiring, software, and the rules below.",
+      },
+      {
+        type: "video",
+        src: "/images/rocky/build-reel.mp4",
+        poster: "/images/rocky/build-reel-poster.jpg",
+        portrait: true,
+        caption: "Build day, 30 seconds",
+      },
+
+      { type: "h2", text: "What Rocky is" },
+      {
+        type: "kv",
+        rows: [
+          { label: "Body", value: "Rock-shaped shell and base plate, printed in PETG, about 1 kg" },
+          { label: "Legs", value: "5 legs, 10 Feetech SCS0009 bus servos (a hip and a knee per leg)" },
+          { label: "Brain", value: "Radxa ZERO 3W on a removable drawer" },
+          { label: "Power", value: "A Sony-style NP-F camera battery clipped on the roof" },
+          { label: "Senses", value: "Motion sensor, 8 x 8 depth sensor, two mics, speaker, round display eye" },
+          { label: "Voice", value: "Whisper for hearing, Claude for thinking, ElevenLabs for speaking" },
+          { label: "Parts", value: "About $400 on the robot" },
+        ],
+      },
+
+      { type: "h2", text: "Six weeks of CAD, one week of building" },
+      {
+        type: "p",
+        text:
+          "The first versions in early October ran on a tiny ESP32 board and cheap hobby servos. Then I saw Microduck, Pollen Robotics' little walking robot, and on October 25 we threw that plan out: smart bus servos that report their own position, load and temperature, and a real Linux board for a brain.",
+      },
+      {
+        type: "p",
+        text:
+          "Claude wrote the whole robot as Python code instead of clicking around in a CAD program. Every hole is a named number. Every bought part is modeled as a body, and a check runs on every change to prove nothing overlaps (2,520 pairs of parts, last I looked). I could still open it in Onshape and measure things myself, which was really useful when something didn't fit.",
+      },
+      {
+        type: "image",
+        src: "/images/rocky/explorer-exploded.jpg",
+        alt: "Exploded view of Rocky's CAD model in the parts explorer",
+        caption: "The parts explorer: every piece of Rocky, pulled apart",
+      },
+
+      { type: "h2", text: "Printing" },
+      {
+        type: "p",
+        text:
+          "Everything printed on my Prusa CORE One+ in PETG. PLA softens around 55 to 60 C, and a dark shell sitting in the sun gets there.",
+      },
+      {
+        type: "p",
+        text:
+          "The first lesson came fast: the servo didn't fit. My printer prints holes 0.3 to 0.5 mm small in PETG, and the first design had almost no clearance. I lost a couple of nights to that. At one point I told Claude: \"The whole point of this project is not to be spending hours measuring millimeters.\" The fix was a rule we kept for the rest of the build: model at least 0.6 mm of air around every bought part, print one small test piece, take one caliper reading, then print the real thing.",
+      },
+      {
+        type: "p",
+        text:
+          "The servo horns were the other fight. They kept pulling out. I asked for three simple options, picked round screw holes, and they held on the first try. That ended up being the best call of the week, and it's the pattern I'd repeat: Claude lays out options, I pick.",
+      },
+      {
+        type: "gallery",
+        images: [
+          { src: "/images/rocky/printer-first-layer.jpg", alt: "First layer on the Prusa CORE One+", caption: "First layer" },
+          { src: "/images/rocky/printer-leg.jpg", alt: "Legs printing", caption: "Legs printing" },
+          { src: "/images/rocky/all-5-legs.jpg", alt: "All five legs built on the bench", caption: "All 5 legs, 15 Nov" },
+        ],
+      },
+
+      { type: "h2", text: "Wiring (the hard part)" },
+      {
+        type: "p",
+        text:
+          "This is where it got painful. I made about 40 solder joints, and most of them didn't need to exist. There were plug-in versions of almost every board, and I only heard about them after the soldering was done. In the moment I said: \"This was like obnoxious, how much soldering I have to do.\"",
+      },
+      {
+        type: "p",
+        text:
+          "The other problem was pictures. For a while every step's diagram showed up after I needed it, and some were guesses drawn as fact. What finally worked was one master sheet: real photos of every board, an arrow on every pin, every wire end to end. It's generated from a data file, so it never drifts from what's actually on the robot.",
+      },
+      {
+        type: "image",
+        src: "/images/rocky/wiring-sheet.jpg",
+        alt: "Rocky's master wiring sheet with real board photos and an arrow on every pin",
+        caption: "The one wiring sheet: every board, every pin, every wire",
+      },
+      {
+        type: "image",
+        src: "/images/rocky/harness.jpg",
+        alt: "The servo harness laid out on the bench",
+        caption: "The servo harness: plug-in boards, no more solder",
+        size: "medium",
+      },
+
+      { type: "h2", text: "First stand, first walk" },
+      {
+        type: "p",
+        text:
+          "Sunday, November 15. Claude scanned the servo bus, all 10 servos answered, and we saved a standing pose. On the first sit and stand the back leg went the complete wrong way. Two horns had gone on off-centre. These servos have no end stops, so each one has to be powered and centred before its horn goes on. Lesson learned.",
+      },
+      {
+        type: "p",
+        text:
+          "At 6:44pm I clicked Walk forward on the button panel and he walked. Backwards. Claude flipped the direction on all five hips and he walked forward. Eleven minutes later he waved. All I could say was: \"This is pretty impressive.\"",
+      },
+
+      { type: "h2", text: "Teaching him to talk" },
+      {
+        type: "p",
+        text:
+          "By 9:25pm that same night, Rocky talked. The heavy lifting runs on my Mac Mini: Whisper turns speech into text, Claude writes the reply and decides if he should move, and ElevenLabs gives him a voice. About two seconds from the end of your sentence to his first word. You can tell him to walk, dance or go to sleep, and if a move doesn't happen, he tells you why.",
+      },
+      {
+        type: "p",
+        text:
+          "The first time the amp was in the body he said \"Hello, I'm Rocky\" and it was crystal clear. That was a good moment.",
+      },
+      {
+        type: "gallery",
+        images: [
+          { src: "/images/rocky/eye-moods.png", alt: "Rocky's ten eye moods", caption: "Eye moods: listening, thinking, speaking, sleepy" },
+          { src: "/images/rocky/dashboard-twin.png", alt: "Live dashboard with a 3D twin of Rocky", caption: "Live dashboard: the 3D twin moves with him" },
+        ],
+      },
+      {
+        type: "p",
+        text:
+          "There's also a live dashboard with a 3D twin of Rocky. When I moved one of his legs by hand, the twin's leg moved the same way. And he works away from home now too, on my phone's hotspot.",
+      },
+
+      { type: "h2", text: "What I'd tell anyone building hardware with Claude" },
+      {
+        type: "p",
+        text:
+          "After the build, I had Claude audit every session, roughly 1,500 of my messages, and turn what went wrong into rules. These are baked into the master prompt:",
+      },
+      {
+        type: "list",
+        items: [
+          "Pictures before the step, not after. Made from real data: CAD renders, product photos, a photo of your board. Never a guess drawn as fact.",
+          "One master wiring sheet, always current.",
+          "You decide anything you'll touch with your hands: board placement, cable routes, mounting, the power switch. Claude shows 2 or 3 options rendered from the CAD. Claude decides software, pins and firmware.",
+          "No soldering by default. Every joint comes with a plug-in alternative and its price.",
+          "Measure every bought part before it gets a CAD feature. Read what came in the bag before buying more.",
+          "Heat, power and the sensor bus are design inputs. Mine hit 85 C screwed flat to plastic.",
+          "Fix first, then prove. Don't make yourself the test instrument.",
+          "One STATUS file as the single source of truth.",
+        ],
+      },
+      {
+        type: "p",
+        text:
+          "The best parts of working this way: I never touched the Radxa's software. In my words at the time: \"That's something that would have been painstaking for me to figure out.\" And every measurement is dialed in, so when something doesn't fit, you can find out exactly why.",
+      },
+
+      { type: "h2", text: "Build your own" },
+      {
+        type: "p",
+        text:
+          "Click Prompt your Claude in the top right. It opens Claude with a master prompt that interviews you first (your printer, what you own, your budget), then walks you through the build phase by phase. If your Claude can't open links, the full prompt is copied to your clipboard too. Paste it in.",
+      },
+      {
+        type: "link",
+        label: "Rocky v1 print files (STLs + print settings)",
+        href: "/files/rocky/rocky-v1-stl.zip",
+        description: "26 STLs exported from the CAD on 14 Nov, already oriented for printing, with the known v1 flaws listed",
+      },
+      {
+        type: "link",
+        label: "Rocky v1 parts list",
+        href: "/files/rocky/PARTS.md",
+        description: "Everything on the robot, with Amazon ASINs and rough prices",
+      },
+      {
+        type: "link",
+        label: "The master prompt",
+        href: "/prompts/rocky.md",
+        description: "Read it before you paste it",
+      },
+
+      { type: "h2", text: "What's next" },
+      {
+        type: "p",
+        text:
+          "Overall I'm very, very happy with him. The parts fit, the design is unique, and I'll be bringing him places. But v2 is already planned: TPU boots so his feet stop slipping, fewer and shorter wires with zero new solder joints, the Radxa alone on a plate that lifts off, a heatsink, a real power switch, better hearing, and a camera that actually shows a picture.",
+      },
+      {
+        type: "p",
+        text:
+          "If you build one, send it to me. I want to see your Rocky.",
+      },
+    ],
+  },
   {
     slug: "gauntlet-part-three",
     title: "Gauntlet Part Three: High Agency Gets You Hired",
