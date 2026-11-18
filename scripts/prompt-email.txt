@@ -1,0 +1,10 @@
+Subject: Your Rocky build prompt
+
+Hi! Thanks for checking out Rocky.
+
+Here's the master prompt that walks your Claude through the whole build: https://alexandergouyet.com/prompts/rocky.md
+Paste it into Claude, or open the post and hit "Prompt your Claude": https://alexandergouyet.com/blog/rocky
+
+Send me a photo when yours takes its first steps.
+
+Alexander

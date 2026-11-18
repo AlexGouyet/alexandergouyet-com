@@ -7,6 +7,9 @@ import { SectionBlock } from "@/components/SectionBlock";
 import { PromptYourClaude } from "@/components/PromptYourClaude";
 import { readFileSync } from "node:fs";
 import path from "node:path";
+import { SignupForm } from "@/components/SignupForm";
+import { QrCodes } from "@/components/QrCodes";
+import { QR_ITEMS } from "@/lib/qr";
 
 const SITE_URL = "https://alexandergouyet.com";
 
@@ -116,11 +119,31 @@ export default async function BlogPostPage({
           </figure>
         )}
 
+        {post.masterPrompt && <SignupForm source={`${post.slug}-top`} />}
+
         <div className="border-t border-[color:var(--border)] pt-8">
           {post.body.map((section, i) => (
             <SectionBlock key={i} section={section} />
           ))}
         </div>
+
+        {post.masterPrompt && (
+          <>
+            <SignupForm source={`${post.slug}-bottom`} />
+            <section className="mt-12 pt-8 border-t border-[color:var(--border)]">
+              <div className="flex items-baseline justify-between mb-6">
+                <h2 className="text-2xl font-semibold tracking-tight">Scan to share</h2>
+                <Link
+                  href="/qr"
+                  className="text-xs font-mono uppercase tracking-widest text-[color:var(--fg-muted)] hover:text-[color:var(--accent)]"
+                >
+                  Full screen →
+                </Link>
+              </div>
+              <QrCodes items={QR_ITEMS} />
+            </section>
+          </>
+        )}
       </article>
 
       <Footer />
